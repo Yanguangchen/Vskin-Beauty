@@ -22,7 +22,7 @@ function HorizontalBanner() {
             </div>
             <div className={styles.container2}>
               <p className={`${styles.textAlightLeft2} ${styles.TextContent}`}>
-                <b>Pedicure and Manicure</b> <br></br>
+                <b>Non Invasive & Safe Technology</b> <br></br>
                 The VSkin system is a pneumatic, gas-driven delivery mechanism
                 that injects beauty serums directly into the skins dermis layer
                 without using needles. This non-invasive approach reduces the
