@@ -36,8 +36,8 @@ const AccordionItem = ({ title, children }) => {
             textAlign: "center",
             transition: "background-color 0.3s",
             fontSize: "150%",
-            background: "black",
-            color: "#ebd484",
+            background: "#968442",
+            color: "white",
             border: "1px solid black",
           }}
         >

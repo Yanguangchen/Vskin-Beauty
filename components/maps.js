@@ -11,11 +11,11 @@ function Maps() {
         <div className={styles.grid1maps}>
           <iframe
             className={styles["grid-maps"]}
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4762.552424109482!2d103.8767406!3d1.3549736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1735ce773389%3A0x54d073eec8db33b4!2sEmille%20International%20Beauty%20%26%20Skin%20Care%20Center!5e1!3m2!1sen!2ssg!4v1736092817721!5m2!1sen!2ssg"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7205714435404!2d103.72865317496569!3d1.3440719986431962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da3d068cc5561f%3A0x7be24b2708d43a14!2sShebella%20Beauty%20%40%20Jurong!5e0!3m2!1sen!2ssg!4v1736929342988!5m2!1sen!2ssg"
             allowFullScreen="" // React uses camelCase
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="Emille International Beauty & Skin Care Center"
+            title="Vskin Beauty"
           ></iframe>
         </div>
       </div>

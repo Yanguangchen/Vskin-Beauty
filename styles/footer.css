@@ -11,7 +11,7 @@
   font-size: 18px;
   border: 1px solid #fff;
   outline: 0;
-  background-color: #F22E31;
+  background-color: black;
   color: white;
   cursor: pointer;
   padding: 15px;
@@ -62,7 +62,7 @@
   flex-direction: column;
 }
 .bottomSection {
-  background: #F22E31;
+  background: black;
   padding: 1em;
   color: white;
   flex-direction: column;

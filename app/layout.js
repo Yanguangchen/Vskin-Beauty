@@ -167,10 +167,10 @@ export default function RootLayout({ children }) {
     },
     founder: {
       "@type": "Person",
-      name: "Wong Mae Swee",
+      name: "Shirlyn",
       jobTitle: "Founder",
       description:
-        "Wong Mae Swee is the founder of Journey Beauty, with a passion for beauty and wellness. She believes in empowering individuals to embrace their unique beauty and feel confident in their skin.",
+        "Wong Mae Swee is the founder of Vskin slimming & beauty, with a passion for beauty and wellness. She believes in empowering individuals to embrace their unique beauty and feel confident in their skin.",
     },
     employee: [
       {
@@ -230,7 +230,6 @@ export default function RootLayout({ children }) {
           async
           src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.2.10/iframeResizer.min.js"
         ></script>
-        <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
 
         <script
           type="module"
@@ -245,7 +244,6 @@ export default function RootLayout({ children }) {
       <body>
       <script src="https://files.bpcontent.cloud/2025/01/03/17/20250103172846-B5A8NMAZ.js"></script>
         <Navbar /> {/* Render the Navbar as the first component */}
-        <ContactForm />
         {children} {/* Render child routes */}
       </body>
     </html>

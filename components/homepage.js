@@ -77,10 +77,6 @@ function Homepage() {
       <Suspense fallback={<Loading />}>
         <Contactparent />
       </Suspense>
-
-      <Suspense fallback={<Loading />}>
-        <Socials />
-      </Suspense>
       <script
         src="https://widgets.sociablekit.com/facebook-page-posts/widget.js"
         defer
