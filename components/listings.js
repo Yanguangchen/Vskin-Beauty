@@ -11,7 +11,6 @@ function Listings() {
           width="500"
           height="562"
           style={{ border: "none", overflow: "hidden", marginBottom: "10%" }}
-          allowFullScreen={true}
           allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
         ></iframe>
         <iframe
@@ -20,10 +19,7 @@ function Listings() {
           width="267"
           style={{ overflow: "hidden", marginBottom: "10%" }}
           height="476"
-          frameborder="0"
-          allowfullscreen="true"
           allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-          allowFullScreen="true"
         ></iframe>
       </div>
     </>
