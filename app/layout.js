@@ -244,7 +244,6 @@ export default function RootLayout({ children }) {
       </head>
       <body>
       <script src="https://files.bpcontent.cloud/2025/01/03/17/20250103172846-B5A8NMAZ.js"></script>
-      <script id="setmore_script" type="text/javascript" src="https://storage.googleapis.com/fullintegration-live/webComponentAppListing/Container/setmoreIframeLive.js"></script><a style={{float:"none", position: "fixed", right: "-2px", top: "25%", display: "block", Zindex: "9999999"}} id="Setmore_button_iframe"  href="https://booking.setmore.com/scheduleappointment/baae3e6e-1abf-4051-845c-9664035b8112"><img border="none" src="https://storage.googleapis.com/full-assets/setmore/images/1.0/Calendar/Setmore-Book-Now.png" alt="Book an appointment with Emille Beauty using Setmore"/></a>
         <Navbar /> {/* Render the Navbar as the first component */}
         <ContactForm />
         {children} {/* Render child routes */}

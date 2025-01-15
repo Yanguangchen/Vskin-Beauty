@@ -36,8 +36,8 @@ const AccordionItem = ({ title, children }) => {
             textAlign: "center",
             transition: "background-color 0.3s",
             fontSize: "150%",
-            background: "#ebd584",
-            color: "black",
+            background: "black",
+            color: "#ebd484",
             border: "1px solid black",
           }}
         >
@@ -99,8 +99,7 @@ const CarOptionsSection = () => {
 
       <div>
         <AccordionItem
-          title="            Non-Invasive with Long-Lasting Results
-"
+          title="Non-Invasive with Long-Lasting Results"
         >
           <h4 style={{ fontWeight: "600", marginBottom: "0.5rem" }}>
             Non-Invasive with Long-Lasting Results
@@ -119,7 +118,7 @@ const CarOptionsSection = () => {
           <p>
             V-Skin treatments offer a wide range of beauty solutions, from fat
             melting and skin tightening to wrinkle removal and pigmentation
-            treatments. Whether you're looking to achieve a more sculpted face,
+            treatments. Whether you are looking to achieve a more sculpted face,
             rejuvenate your skin, or target stubborn fat areas, V-Skin provides
             personalized solutions to help you look and feel your best.
           </p>
