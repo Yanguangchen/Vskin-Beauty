@@ -210,7 +210,7 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
           rel="stylesheet"
         ></link>
-        <link rel="canonical" href="https://journeybeauty.net" />
+        <link rel="canonical" href="https://vskin-beauty.vercel.app/" />
         <link rel="preconnect" href="https://www.google.com" />
         <link rel="dns-prefetch" href="https://www.google.com" />
         <script
@@ -243,7 +243,6 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        <script src="https://files.bpcontent.cloud/2025/01/03/17/20250103172846-B5A8NMAZ.js"></script>
         <Navbar /> {/* Render the Navbar as the first component */}
         {children} {/* Render child routes */}
       </body>
