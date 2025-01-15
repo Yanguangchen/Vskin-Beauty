@@ -54,7 +54,7 @@ function NavBar() {
   };
 
   const logoStyle = {
-    width: "20%",
+    width: "10%",
   };
 
   const menuStyle = {

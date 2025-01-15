@@ -191,7 +191,7 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#F22E31" />
+        <meta name="theme-color" content="#ddc968" />
         <meta name="author" content="Web Wizards" />
         <meta name="robots" content="index, follow" />
         <meta name="googlebot" content="index, follow" />

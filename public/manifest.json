@@ -1,23 +1,23 @@
 {
-  "name": "Emille Enhanced App",
-  "short_name": "Emille",
-  "description": "A progressive web app for language learning.",
+  "name": "VSkin Beauty & Slimming",
+  "short_name": "VSkin",
+  "description": "A progressive web app for beauty and slimming services.",
   "start_url": "/?source=pwa",
   "scope": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#0284c7",
+  "theme_color": "#ddc968",
   "orientation": "portrait-primary",
   "lang": "en-US",
   "icons": [
     {
-      "src": "/icon1.png",
+      "src": "/icon.png",
       "type": "image/png"
     }
   ],
   "screenshots": [
     {
-      "src": "/screenshot.png",
+      "src": "/screenshot.jpg",
       "type": "image/png"
     }
   ],
