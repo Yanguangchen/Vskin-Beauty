@@ -1,0 +1,28 @@
+{
+  "name": "Emille Enhanced App",
+  "short_name": "Emille",
+  "description": "A progressive web app for language learning.",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0284c7",
+  "orientation": "portrait-primary",
+  "lang": "en-US",
+  "icons": [
+    {
+      "src": "/icon1.png",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot.png",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["education", "productivity"],
+  "dir": "ltr",
+  "related_applications": [],
+  "prefer_related_applications": false
+}

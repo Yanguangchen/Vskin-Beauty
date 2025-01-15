@@ -1,0 +1,24 @@
+.videoContainer {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  flex-direction: column;
+  margin-top: 10%;
+  margin-bottom: 3%;
+  overflow: hidden;
+}
+
+.videoStyle {
+  width: 30% !important;
+  border-radius: 30px;
+}
+
+@media (max-width: 768px) {
+  .videoStyle {
+    border-radius: 10px;
+    width: 50% !important;
+
+  }
+}

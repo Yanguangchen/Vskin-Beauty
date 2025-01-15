@@ -1,0 +1,97 @@
+.footerContent,
+.footerStyle {
+  display: flex;
+  justify-content: center;
+}
+#scrollTopButton {
+  position: fixed;
+  bottom: 20px;
+  left: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: 1px solid #fff;
+  outline: 0;
+  background-color: #F22E31;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+.storeButton {
+  box-shadow: none !important;
+  text-shadow: none !important;
+  text-decoration: none !important;
+  border: none !important;
+}
+#scrollTopButton:hover {
+  background-color: #777;
+}
+.footerStyle {
+  background: #fff;
+  color: #fff;
+  text-align: center;
+  padding: 0;
+  margin: 15% 0 0;
+  font-family: Montserrat, sans-serif;
+}
+.footerStyle a {
+  color: #fff;
+  text-decoration: none;
+}
+.footerContent {
+  align-items: center;
+}
+.bottomSection,
+.footerContentPStyle {
+  justify-content: center;
+  display: flex;
+}
+.footerImg {
+  width: 10%;
+  margin-bottom: 5%;
+}
+.footerImg:hover {
+  transition: 0.3s ease-in-out;
+  transform: scale(1.5);
+}
+.footerContentPStyle {
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  flex-direction: column;
+}
+.bottomSection {
+  background: #F22E31;
+  padding: 1em;
+  color: white;
+  flex-direction: column;
+}
+.wwLogo {
+  width: 30%;
+  padding-bottom: 3%;
+  transition: 0.7s ease-in-out;
+}
+.wwLogo:hover {
+  transform: scale(1.1);
+}
+.wwContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+}
+@media (max-width: 760px) {
+  .lists {
+    list-style-type: none;
+    font-size: 80%;
+    padding: 2em;
+  }
+}
+@media (max-width: 390px) {
+  .lists {
+    list-style-type: none;
+    font-size: 70%;
+    padding: 2em;
+  }
+}

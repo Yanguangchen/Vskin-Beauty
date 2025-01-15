@@ -1,0 +1,29 @@
+.hamburger:hover {
+  transform: scale(1.1);
+}
+
+.navlinks:hover {
+  transform: scale(1.1);
+  background-color: #e2b019 !important;
+  color: white !important;
+  border-radius: 100px;
+  border: 1px solid black;
+}
+
+.navlinks {
+  transition: 0.3s ease-in-out;
+}
+
+.topbanner {
+  transition: 0.8s ease-in-out;
+}
+
+.topbanner:hover {
+  transform: scale(1.1);
+}
+@media (max-width: 430px) {
+  .navlinks {
+    font-size: 80% !important;
+    padding: 3%;
+  }
+}

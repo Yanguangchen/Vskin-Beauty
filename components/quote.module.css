@@ -1,0 +1,20 @@
+.container-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  flex-direction: column;
+  margin-top: 5%;
+  margin-bottom: 3%;
+  overflow: hidden;
+}
+.quote-image {
+  width: 80%;
+  border-radius: 1.5rem;
+  border: 1px solid black;
+}
+.vjet-image {
+  width: 30%;
+  margin-top: 2rem;
+}

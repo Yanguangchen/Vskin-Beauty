@@ -1,0 +1,17 @@
+.grid-video:hover {
+  transform: scale(1.1);
+  transition: ease-in-out 0.5s;
+}
+.grid-video {
+  transition: ease-in-out 0.5s;
+}
+@media (max-width: 430px) {
+  .grid-video {
+    width: 170% !important;
+  }
+}
+@media (max-width: 412px) {
+  .grid-video {
+    width: 160% !important;
+  }
+}
