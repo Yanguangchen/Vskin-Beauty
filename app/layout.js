@@ -3,8 +3,6 @@ import "../styles/grid.css";
 import "../styles/navbar.css";
 import Navbar from "../components/navbar";
 
-import ContactForm from "../components/form";
-
 export const metadata = {
   title: "Vskin Beauty & Slimming",
   description:
@@ -33,159 +31,69 @@ export default function RootLayout({ children }) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BeautySalon",
-    name: "VSkin Beauty & Slimming",
+    name: "VSkin Beauty and Slimming",
+    url: "https://vskin-beauty.vercel.app",
+    telephone: "9880 7382",
     description:
-      "Discover your inner beauty and confidence with VSkin Beauty & Slimming. Offering a range of premium beauty and wellness services in Singapore.",
-    url: "https://journeybeauty.net/",
-    telephone: "+65 9096 7798",
-    email: "journeybeauty@gmail.com",
+      "VSkin Beauty and Slimming offers non-invasive slimming treatments powered by VSkin Technology. Our treatments focus on fat burning, skin tightening, and skin rejuvenation with long-lasting results and little to no downtime.",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Blk 201E Tampines St 23, #01-78",
+      streetAddress: "Blk 350 Jurong East Ave 1, #01-1239 (Level 2)",
       addressLocality: "Singapore",
-      postalCode: "527201",
+      postalCode: "600350",
       addressCountry: "SG",
     },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: "1.3419",
+      longitude: "103.7441",
+    },
+    hasMap:
+      "https://www.google.com/maps?q=Blk+350+Jurong+East+Ave+1,+%2301-1239+(Level+2),+Singapore+600350",
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
-        dayOfWeek: [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday",
-        ],
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "09:00",
+        closes: "19:00",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Saturday", "Sunday"],
         opens: "10:00",
-        closes: "22:00",
+        closes: "17:00",
       },
     ],
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: 1.353,
-      longitude: 103.943,
+    branchOf: {
+      "@type": "Organization",
+      name: "VSkin Beauty and Slimming",
     },
-    sameAs: ["https://www.facebook.com/profile.php?id=61571261739335"],
-    contactPoint: {
-      "@type": "ContactPoint",
-      telephone: "+65 9096 7798",
-      contactType: "Customer Service",
-      availableLanguage: ["English", "Chinese"],
+    location: {
+      "@type": "Place",
+      name: "Jurong Branch",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Blk 350 Jurong East Ave 1, #01-1239 (Level 2)",
+        addressLocality: "Singapore",
+        postalCode: "600350",
+        addressCountry: "SG",
+      },
     },
-    currenciesAccepted: "SGD",
-    paymentAccepted: "Cash, Credit Card, Mobile Payments",
-    priceRange: "$$",
-    amenityFeature: [
+    additionalProperty: [
       {
-        "@type": "LocationFeatureSpecification",
-        name: "WiFi",
+        "@type": "PropertyValue",
+        name: "Toa Payoh Branch",
+        value: "Available upon request",
       },
       {
-        "@type": "LocationFeatureSpecification",
-        name: "Refreshments",
-      },
-      {
-        "@type": "LocationFeatureSpecification",
-        name: "Free Parking",
-      },
-    ],
-    service: [
-      {
-        "@type": "Service",
-        name: "Facial Treatments",
-        description:
-          "Customized facial treatments that address individual skin needs, using premium skincare products and advanced techniques for a healthy, glowing complexion.",
-        offers: {
-          "@type": "Offer",
-          priceCurrency: "SGD",
-          price: "80",
-          eligibleCustomerType: "Adult",
-        },
-      },
-      {
-        "@type": "Service",
-        name: "Eyebrow Embroidery",
-        description:
-          "Professional eyebrow embroidery service designed to create full, defined, and perfectly shaped brows using high-quality pigments and techniques.",
-        offers: {
-          "@type": "Offer",
-          priceCurrency: "SGD",
-          price: "300",
-          eligibleCustomerType: "Adult",
-        },
-      },
-      {
-        "@type": "Service",
-        name: "IPL Laser Treatments",
-        description:
-          "State-of-the-art IPL treatments for skin rejuvenation, addressing pigmentation, fine lines, acne scars, and unwanted hair.",
-        offers: {
-          "@type": "Offer",
-          priceCurrency: "SGD",
-          price: "150",
-          eligibleCustomerType: "Adult",
-        },
-      },
-    ],
-    review: [
-      {
-        "@type": "Review",
-        author: {
-          "@type": "Person",
-          name: "Alice Tan",
-        },
-        datePublished: "2024-10-01",
-        reviewBody:
-          "The facial treatment at Journey Beauty was exceptional. The staff were attentive and my skin felt rejuvenated. Highly recommend!",
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: "5",
-          bestRating: "5",
-        },
-      },
-      {
-        "@type": "Review",
-        author: {
-          "@type": "Person",
-          name: "John Lim",
-        },
-        datePublished: "2024-09-15",
-        reviewBody:
-          "Great experience with the eyebrow embroidery. The results looked natural, and the process was painless.",
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: "4.5",
-          bestRating: "5",
-        },
-      },
-    ],
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.75",
-      ratingCount: "2",
-    },
-    founder: {
-      "@type": "Person",
-      name: "Shirlyn",
-      jobTitle: "Founder",
-      description:
-        "Wong Mae Swee is the founder of Vskin slimming & beauty, with a passion for beauty and wellness. She believes in empowering individuals to embrace their unique beauty and feel confident in their skin.",
-    },
-    employee: [
-      {
-        "@type": "Person",
-        name: "Emily Wong",
-        jobTitle: "Senior Esthetician",
-      },
-      {
-        "@type": "Person",
-        name: "David Lee",
-        jobTitle: "Eyebrow Specialist",
+        "@type": "PropertyValue",
+        name: "Non-Invasive Treatments",
+        value:
+          "Our treatments include VSkin Nose Lifting Collagen (lasting 16–18 months with peak conditions around 8–12 months) and VSkin Fat Melt (results are not permanent and require a balanced diet and regular activity).",
       },
     ],
   };
+
   return (
     <html lang="en">
       <head>
@@ -197,23 +105,43 @@ export default function RootLayout({ children }) {
         <meta name="googlebot" content="index, follow" />
         <link rel="icon" href="/icon.png" />
         <link rel="apple-touch-icon" href="/icon.png" />
-        <meta property="og:image" content="/Assets/icon.png" />
-        <meta property="og:image:alt" content="App Icon of VSkin Beauty & Slimming" />
-        <meta property="twitter:image" content="/Assets/icon.png" />
-        <meta property="twitter:image:alt" content="App Icon of VSkin Beauty & Slimming" />
-
+        <meta property="og:url" content="https://vskin-beauty.vercel.app/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Vskin Beauty & Slimming" />
+        <meta
+          property="og:description"
+          content="Discover your inner beauty and confidence with Vskin Beauty & Slimming. Offering a range of premium beauty and wellness services in Singapore."
+        />
+        <meta
+          property="og:image"
+          content="https://opengraph.b-cdn.net/production/images/496a7544-7fe2-4b67-8956-8b52ab6863c1.jpg?token=DX3vtu6h6wL-lIge-Zm-R4lv5Pse6SV_zlHDh3eLZY8&height=500&width=500&expires=33272945155"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="vskin-beauty.vercel.app" />
+        <meta
+          property="twitter:url"
+          content="https://vskin-beauty.vercel.app/"
+        />
+        <meta name="twitter:title" content="Vskin Beauty & Slimming" />
+        <meta
+          name="twitter:description"
+          content="Discover your inner beauty and confidence with Vskin Beauty & Slimming. Offering a range of premium beauty and wellness services in Singapore."
+        />
+        <meta
+          name="twitter:image"
+          content="https://opengraph.b-cdn.net/production/images/496a7544-7fe2-4b67-8956-8b52ab6863c1.jpg?token=DX3vtu6h6wL-lIge-Zm-R4lv5Pse6SV_zlHDh3eLZY8&height=500&width=500&expires=33272945155"
+        />
         <link rel="manifest" href="/manifest.json" />
-
-        <link rel="preconnect" href="https://fonts.googleapis.com"></link>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"
           crossOrigin="true"
-        ></link>
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
           rel="stylesheet"
-        ></link>
+        />
         <link rel="canonical" href="https://vskin-beauty.vercel.app/" />
         <link rel="preconnect" href="https://www.google.com" />
         <link rel="dns-prefetch" href="https://www.google.com" />
@@ -235,7 +163,6 @@ export default function RootLayout({ children }) {
           async
           src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.2.10/iframeResizer.min.js"
         ></script>
-
         <script
           type="module"
           src="https://unpkg.com/@splinetool/viewer@1.9.54/build/spline-viewer.js"
@@ -247,8 +174,8 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        <Navbar /> {/* Render the Navbar as the first component */}
-        {children} {/* Render child routes */}
+        <Navbar />
+        {children}
       </body>
     </html>
   );
