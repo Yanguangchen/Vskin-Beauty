@@ -39,7 +39,7 @@ function HorizontalBanner() {
             <div className={styles.container2}>
               <p className={`${styles.textAlightLeft3} ${styles.TextContent}`}>
                 <b>VSkin Technology</b> <br></br>
-                The V-jet technology offers unmatched comfort and convenience to
+                The V-Skin technology offers unmatched comfort and convenience to
                 customers by providing a non-invasive and needle-free treatment
                 that eliminates the discomfort commonly associated with
                 traditional beauty procedures. The use of a pneumatic,
