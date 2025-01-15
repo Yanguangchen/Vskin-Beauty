@@ -71,10 +71,6 @@ function Homepage() {
       </Suspense>
 
       <Suspense fallback={<Loading />}>
-        <GridContainer />
-      </Suspense>
-
-      <Suspense fallback={<Loading />}>
         <Listings />
       </Suspense>
 
