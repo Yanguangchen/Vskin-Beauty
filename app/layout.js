@@ -6,25 +6,26 @@ import Navbar from "../components/navbar";
 import ContactForm from "../components/form";
 
 export const metadata = {
-  title: "Emille International Beauty",
-  description: "Discover your inner beauty and confidence.",
+  title: "Vskin Beauty & Slimming",
+  description:
+    "Discover your inner beauty and confidence with Vskin Beauty & Slimming. Offering a range of premium beauty and wellness services in Singapore.",
   openGraph: {
-    title: "Emille International Beauty",
+    title: "Vskin Beauty & Slimming",
     description:
-      "Welcome to Emille Beauty, a premier beauty salon located in the heart of Singapore. Nestled conveniently at 9 Yio Chu Kang Road, #01-03, SPACE @ Kovan, our salon is just a short walk from Kovan MRT, offering an oasis of luxury and tranquility for all your beauty and wellness needs. At Emille Beauty, we specialize in a wide range of services designed to pamper, rejuvenate, and enhance your natural beauty",
+      "Discover your inner beauty and confidence with Vskin Beauty & Slimming. Offering a range of premium beauty and wellness services in Singapore.",
     url: "https://journeybeauty.net",
     type: "website",
-    siteName: "Emille Beauty",
+    siteName: "Vskin Beauty & Slimming",
     images: [
       {
-        url: "/Assets/icon1.png",
-        alt: "App Icon of EmilleBeauty",
+        url: "/Assets/icon.png",
+        alt: "App Icon of VSkin Beauty & Slimming",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["/Assets/icon1.png"],
+    images: ["/Assets/icon.png"],
   },
 };
 
@@ -32,9 +33,9 @@ export default function RootLayout({ children }) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BeautySalon",
-    name: "Emille Beauty",
+    name: "VSkin Beauty & Slimming",
     description:
-      "Welcome to Emille Beauty, a premier beauty salon located in the heart of Singapore. Nestled conveniently at 9 Yio Chu Kang Road, #01-03, SPACE @ Kovan, our salon is just a short walk from Kovan MRT, offering an oasis of luxury and tranquility for all your beauty and wellness needs. At Emille Beauty, we specialize in a wide range of services designed to pamper, rejuvenate, and enhance your natural beauty",
+      "Discover your inner beauty and confidence with VSkin Beauty & Slimming. Offering a range of premium beauty and wellness services in Singapore.",
     url: "https://journeybeauty.net/",
     telephone: "+65 9096 7798",
     email: "journeybeauty@gmail.com",
@@ -194,8 +195,8 @@ export default function RootLayout({ children }) {
         <meta name="author" content="Web Wizards" />
         <meta name="robots" content="index, follow" />
         <meta name="googlebot" content="index, follow" />
-        <link rel="icon" href="/icon1.png" />
-        <link rel="apple-touch-icon" href="/icon1.png" />
+        <link rel="icon" href="/icon.png" />
+        <link rel="apple-touch-icon" href="/icon.png" />
 
         <link rel="manifest" href="/manifest.json" />
 
@@ -242,7 +243,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-      <script src="https://files.bpcontent.cloud/2025/01/03/17/20250103172846-B5A8NMAZ.js"></script>
+        <script src="https://files.bpcontent.cloud/2025/01/03/17/20250103172846-B5A8NMAZ.js"></script>
         <Navbar /> {/* Render the Navbar as the first component */}
         {children} {/* Render child routes */}
       </body>

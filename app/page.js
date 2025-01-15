@@ -2,7 +2,7 @@ import MainPage from "../components/homepage"; // Import the HomePage component
 import "../styles/footer.css";
 
 export const metadata = {
-  title: "Emille International Beauty",
+  title: " VSKin Beauty & Slimming",
   description: "Discover your inner beauty and confidence.",
 };
 
