@@ -197,6 +197,10 @@ export default function RootLayout({ children }) {
         <meta name="googlebot" content="index, follow" />
         <link rel="icon" href="/icon.png" />
         <link rel="apple-touch-icon" href="/icon.png" />
+        <meta property="og:image" content="/Assets/icon.png" />
+        <meta property="og:image:alt" content="App Icon of VSkin Beauty & Slimming" />
+        <meta property="twitter:image" content="/Assets/icon.png" />
+        <meta property="twitter:image:alt" content="App Icon of VSkin Beauty & Slimming" />
 
         <link rel="manifest" href="/manifest.json" />
 
