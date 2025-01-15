@@ -173,13 +173,18 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
 
-        <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+        <script
+          async
+          src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"
+        ></script>
       </head>
       <body>
-        <script src="https://files.bpcontent.cloud/2025/01/15/14/20250115141621-7O84I2EE.js"></script>
-
         <Navbar />
         {children}
+        <script
+          async
+          src="https://files.bpcontent.cloud/2025/01/15/14/20250115141621-7O84I2EE.js"
+        ></script>
       </body>
     </html>
   );
