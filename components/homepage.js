@@ -1,7 +1,6 @@
 "use client";
 
 import React, { Suspense, lazy } from "react";
-// import { ElfsightWidget } from "react-elfsight-widget";
 
 // Lazy load components
 const SpliceElement = lazy(() => import("./splice"));
@@ -76,7 +75,7 @@ function Homepage() {
       </Suspense>
 
       <Suspense fallback={<Loading />}>
-        <ReviewCarousell/>
+        <ReviewCarousell />
       </Suspense>
 
       <Suspense fallback={<Loading />}>
