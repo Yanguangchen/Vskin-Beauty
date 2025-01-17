@@ -1,8 +1,11 @@
-import withPWA from 'next-pwa';
+const withPWA = require('next-pwa')({
+  dest: 'public', // Service worker output
+  disable: process.env.NODE_ENV === 'development', // Disable in development
+});
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true, // Enable React Strict Mode
+  reactStrictMode: true, // React strict mode enabled
   async headers() {
     return [
       {
@@ -20,10 +23,6 @@ const nextConfig = {
       },
     ];
   },
-  pwa: {
-    dest: 'public', // Directory for the service worker
-    disable: process.env.NODE_ENV === 'development', // Disable PWA during development
-  },
 };
 
-export default withPWA(nextConfig);
+module.exports = withPWA(nextConfig);
