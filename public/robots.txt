@@ -1,5 +1,2 @@
 User-agent: *
-Disallow:
-
-
-Sitemap: https://vskin-beauty.vercel.app/sitemap.xml
+Allow: /
