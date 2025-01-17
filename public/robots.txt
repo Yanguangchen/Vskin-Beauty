@@ -2,4 +2,4 @@ User-agent: *
 Disallow:
 
 
-Sitemap: https://journeybeauty.net/sitemap.xml
+Sitemap: https://vskin-beauty.vercel.app/sitemap.xml
