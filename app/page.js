@@ -2,7 +2,7 @@ import MainPage from "../components/homepage"; // Import the HomePage component
 import "../styles/footer.css";
 
 export const metadata = {
-  title: " VSKin Beauty & Slimming",
+  title: " VSkin Beauty & Slimming",
   description: "Discover your inner beauty and confidence.",
 };
 
