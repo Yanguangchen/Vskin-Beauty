@@ -1,154 +1,93 @@
 import React, { useState } from "react";
 
-const AccordionItem = ({ title, children }) => {
-  const [isOpen, setIsOpen] = useState(false);
+const Card = ({ title, description }) => {
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
     <div
       style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
+        ...styles.card,
+        ...(isHovered ? styles.cardHover : {}),
       }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
-      <div
-        style={{
-          marginTop: "5%",
-          borderRadius: "0.5rem",
-          overflow: "hidden",
-          background: "#512573",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          width: "100%",
-        }}
-      >
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="accordionTabs"
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            width: "100%",
-            padding: "1rem 5rem",
-            textAlign: "center",
-            transition: "background-color 0.3s",
-            fontSize: "130%",
-            background: "#968442",
-            color: "white",
-            border: "1px solid black",
-          }}
-        >
-          <span
-            style={{
-              fontWeight: "600",
-              padding: "10px",
-              borderRadius: "20px",
-            }}
-          >
-            {title}
-          </span>
-          <span
-            style={{
-              transform: isOpen ? "rotate(45deg)" : "rotate(0)",
-              transition: "transform 0.3s",
-              marginLeft: "0.5rem",
-            }}
-          >
-            +
-          </span>
-        </button>
-        <div
-          style={{
-            maxHeight: isOpen ? "1000px" : "0",
-            overflow: "hidden",
-            transition: "max-height 0.3s ease-in-out",
-          }}
-        >
-          <div style={{ padding: "1.5rem", background: "white" }}>
-            {children}
-          </div>
-        </div>
-      </div>
+      <h2 style={styles.cardTitle}>{title}</h2>
+      <p style={styles.cardDescription}>{description}</p>
     </div>
   );
 };
 
 const AboutSection = () => {
   return (
-    <div
-      style={{
-        maxWidth: "64rem",
-        margin: "0 auto",
-        padding: "1.5rem",
-        borderRadius: "0.75rem",
-      }}
-    >
-      <h1
-        style={{
-          fontSize: "1.875rem",
-          fontWeight: "bold",
-          textAlign: "center",
-        }}
-      >
+    <div style={styles.mainContainer}>
+      <h1 style={styles.sectionTitle}>
         Let us bring out the best in you, shine with confidence, and embrace
         your beauty
       </h1>
 
-      <div>
-        <AccordionItem title="Non-Invasive with Long-Lasting Results">
-          <h4 style={{ fontWeight: "600", marginBottom: "0.5rem" }}>
-            Revolutionary Non-Invasive Treatments with Enduring Benefits
-          </h4>
-          <p>
-            Discover the power of V-Skin technology, a state-of-the-art
-            pneumatic gas-driven system that delivers skin-enhancing solutions
-            deep into the dermis layer without the need for needles. This
-            advanced non-invasive approach minimizes discomfort and requires
-            virtually no downtime, enabling you to maintain your daily routine
-            effortlessly. Experience remarkable transformations with treatments
-            like the V-Skin Nose Lifting procedure, which offers lasting results
-            of 16–18 months, with optimal effects becoming visible around 8–12
-            months.
-          </p>
-        </AccordionItem>
-
-        <AccordionItem title="Comprehensive Skin and Body Solutions">
-          <h4 style={{ fontWeight: "600", marginBottom: "0.5rem" }}>
-            All-in-One Beauty and Wellness Solutions
-          </h4>
-          <p>
-            V-Skin treatments offer a holistic suite of advanced beauty
-            solutions, tailored to meet your unique needs. From fat-melting and
-            skin-tightening therapies to wrinkle reduction and pigmentation
-            correction, our treatments are designed to sculpt, rejuvenate, and
-            refresh. Whether you are seeking a more defined facial contour,
-            radiant skin, or targeted fat reduction, V-Skin’s personalized
-            approach ensures transformative results that empower you to look and
-            feel your absolute best.
-          </p>
-        </AccordionItem>
-
-        <AccordionItem title="Affordable and Transparent Pricing">
-          <h4 style={{ fontWeight: "600", marginBottom: "0.5rem" }}>
-            Premium Care with Honest and Accessible Pricing
-          </h4>
-          <p>
-            At Vskin Beauty & Slimming, we are dedicated to making cutting-edge
-            beauty treatments accessible and affordable. Enjoy a transparent
-            pricing model with no GST, no hidden fees, and absolutely no hard
-            selling. We believe in empowering you with choice and
-            value—experience premium services like our fat melting and lifting
-            treatments starting at just $380 for first-time trials. Our
-            commitment to affordability ensures that everyone can invest in
-            their beauty and well-being with confidence.
-          </p>
-        </AccordionItem>
+      {/* 3 cards laid out side by side in a responsive grid */}
+      <div style={styles.grid}>
+        <Card
+          title="Non-Invasive Treatments"
+          description="Experience revolutionary non-invasive procedures that provide lasting results without needles or downtime."
+        />
+        <Card
+          title="Comprehensive Solutions"
+          description="Achieve fat-melting, skin-tightening, wrinkle reduction, and more with our all-in-one V-Skin technology."
+        />
+        <Card
+          title="Affordable Pricing"
+          description="Transparent prices with no hidden fees—experience premium services starting at just $380 for first-time trials."
+        />
       </div>
     </div>
   );
+};
+
+/* Inline styling for demonstration purposes */
+const styles = {
+  mainContainer: {
+    maxWidth: "64rem",
+    margin: "0 auto",
+    padding: "1.5rem",
+    borderRadius: "0.75rem",
+  },
+  sectionTitle: {
+    fontSize: "1.875rem",
+    fontWeight: "bold",
+    textAlign: "center",
+    marginBottom: "2rem",
+  },
+  grid: {
+    display: "grid",
+    gap: "1.5rem",
+    gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+    // This ensures it stays responsive by adapting the number of columns
+  },
+  card: {
+    background: "linear-gradient(135deg, #652D90 0%, #40215C 100%)",
+    borderRadius: "0.75rem",
+    padding: "2rem",
+    color: "#FFF",
+    textAlign: "center",
+    transition: "transform 0.3s, box-shadow 0.3s",
+    boxShadow: "0 5px 15px rgba(0,0,0,0.2)",
+    cursor: "pointer",
+  },
+  cardHover: {
+    transform: "translateY(-5px)",
+    boxShadow: "0 15px 30px rgba(0,0,0,0.3)",
+  },
+  cardTitle: {
+    marginBottom: "1rem",
+    fontSize: "1.25rem",
+    fontWeight: "bold",
+  },
+  cardDescription: {
+    fontSize: "1rem",
+    lineHeight: "1.5",
+  },
 };
 
 export default AboutSection;
