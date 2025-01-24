@@ -59,11 +59,11 @@ function Homepage() {
       </Suspense>
 
       <Suspense fallback={<Loading />}>
-        <Quote />
+        <AboutSection />
       </Suspense>
 
       <Suspense fallback={<Loading />}>
-        <AboutSection />
+        <Quote />
       </Suspense>
 
       <Suspense fallback={<Loading />}>

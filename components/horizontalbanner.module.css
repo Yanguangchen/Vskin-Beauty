@@ -1,48 +1,60 @@
+/***** TEXT & FONT *****/
 .textAlightLeft2,
 .textAlightLeft3 {
   text-align: left;
   font-size: 2em;
   line-height: 1.3em;
 }
-
-.flexWrapper {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 1em;
-  border-right: none;
+.TextContent {
   font-family: "Quicksand", sans-serif;
   color: black;
   font-weight: 500;
-  background: #fff;
-  transition: 0.5s ease-in-out;
 }
 
-.flexWrapper:hover {
-  color: #968442;
-  font-weight: 1000;
+/***** LAYOUT CONTAINERS *****/
+.totalContainerClass {
+  margin-top: 7em;
+  background: #f9f9f9; /* Soft background for overall section (optional) */
+  padding: 1em 0;
 }
 
+/* "Card" wrapper for each row */
+.cardWrapper {
+  background-color: #fff;           /* Card background */
+  border-radius: 1rem;             /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle drop shadow */
+  margin: 1em auto;                /* Spacing between cards */
+  width: 90%;                      /* Centered width, adjust as needed */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Lift and deepen shadow on hover for a card-like effect */
+.cardWrapper:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* The outer "row" containers become standard flex or block-level, 
+   but we rely on .cardWrapper for the card style now. */
 .gridContainer,
 .gridContainer2 {
   display: grid;
   grid-gap: 0;
   width: 100%;
   text-align: left;
+  padding: 1.5em; /* Some padding inside the card */
 }
 
-.totalContainerClass {
-  margin-top: 7em;
-}
-
+/***** INDIVIDUAL GRID LAYOUTS *****/
 .gridContainer {
   grid-template-columns: 40% 60%;
 }
-
 .gridContainer2 {
   margin-top: 1em;
   grid-template-columns: 60% 40%;
 }
 
+/***** INNER CONTAINERS *****/
 .container1,
 .container2 {
   display: flex;
@@ -50,30 +62,32 @@
   align-items: center;
 }
 
+/* Additional spacing for text blocks */
 .textAlightLeft2 {
   padding: 1em;
 }
-
 .textAlightLeft3 {
   padding: 1em 1em 1em 3em;
 }
 
+/***** VIDEO STYLES *****/
 .videoStyle {
   width: 70%;
   transition: 0.5s ease-in-out;
+  margin: 0 auto;
 }
-
 .videoStyle:hover {
-  width: 70%;
-  border-radius: 0px;
+  border-radius: 0;
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* Rounded corners for the horizontal video by default */
 .HorizontalVideo {
   border-radius: 30px;
 }
 
+/***** MEDIA QUERIES *****/
 @media screen and (max-width: 1029px) {
   .TextContent {
     font-size: 1.4em !important;
@@ -86,11 +100,13 @@
     margin-top: 0 !important;
   }
 }
+
 @media screen and (max-width: 768px) {
   .TextContent {
     font-size: 1.3em !important;
   }
 }
+
 @media screen and (max-width: 687px) {
   .TextContent {
     font-size: 1em !important;
@@ -100,11 +116,13 @@
     height: auto;
   }
 }
+
 @media screen and (max-width: 430px) {
   .TextContent {
     font-size: 0.8em !important;
   }
 }
+
 @media screen and (max-width: 390px) {
   .TextContent {
     font-size: 0.7em !important;
