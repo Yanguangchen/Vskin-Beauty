@@ -24,7 +24,7 @@
   border-radius: 1rem;             /* Rounded corners */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle drop shadow */
   margin: 1em auto;                /* Spacing between cards */
-  width: 90%;                      /* Centered width, adjust as needed */
+  width: 100%;                      /* Centered width, adjust as needed */
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
