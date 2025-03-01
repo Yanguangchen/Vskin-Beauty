@@ -13,7 +13,7 @@
 
 /* Main heading styling (instead of global h1) */
 .contactTitle {
-  color: #051D40;
+  color: #051d40;
   font-size: 2rem;
   margin-bottom: 0.5em;
 }
@@ -23,7 +23,7 @@
   width: 90%;
   display: grid;
   grid-template-columns: 1fr 1fr; /* Two columns side-by-side */
-  gap: 2rem;                     /* Space between columns */
+  gap: 2rem; /* Space between columns */
   color: white;
   margin-top: 2rem;
 }
@@ -36,8 +36,7 @@
 /* --- Each card (left & right columns) --- */
 .subContent {
   /* Gradient background */
-  background: linear-gradient(135deg, black, #303030);
-  
+  background: linear-gradient(135deg, #967f19, #d5c787);
   border-radius: 1.5rem;
   padding: 2rem;
   font-size: 1.1rem;
@@ -53,6 +52,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: 1px solid black;
 }
 
 /* --- Hover lift effect --- */
@@ -61,18 +61,18 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 
   /* Optional: Slightly adjust the gradient on hover */
-  background: linear-gradient(135deg, #000000, #696800);
+  background: linear-gradient(135deg, #d5c787, #967f19, #d5c787);
 }
 
 /* --- Contact paragraph --- */
 .pStyle {
   margin: 0; /* Remove default margin */
-  color: #ffffff; /* Ensure text is readable against the gradient */
+  color: #000000; /* Ensure text is readable against the gradient */
 }
 
 /* --- Sub-heading (Service Hours) --- */
 .h3Style {
-  color: #ffffff; /* White text for contrast */
+  color: #000000; /* White text for contrast */
   margin-bottom: 1rem;
   font-size: 1.25rem;
   font-weight: bold;
@@ -82,7 +82,7 @@
 .openingTime {
   font-weight: 600;
   margin: 0;
-  color: #ffffff; /* White text for consistency */
+  color: #000000; /* White text for consistency */
 }
 
 /* --- Responsive Breakpoints --- */
