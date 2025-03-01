@@ -1,98 +1,125 @@
-/***** TEXT & FONT *****/
-.textAlightLeft2,
-.textAlightLeft3 {
+/* --- General Typography & Defaults --- */
+/* 
+   Shared styles for textAlignLeft2 & textAlignLeft3
+   (both have the same rules, so they're combined here)
+*/
+.textAlignLeft2,
+.textAlignLeft3 {
   text-align: left;
-  font-size: 2em;
+  font-size: 1.3em;
   line-height: 1.3em;
+  font-family: "Poppins", serif;
 }
-.TextContent {
-  font-family: "Quicksand", sans-serif;
+
+/* Flex wrapper for the "cards" */
+.flexWrapper {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1em;
+  font-family: "Poppins", serif;
   color: black;
-  font-weight: 500;
+  background: #fff; /* White background for each section */
+  font-weight: 200;
 }
 
-/***** LAYOUT CONTAINERS *****/
-.totalContainerClass {
-  margin-top: 7em;
-  background: #f9f9f9; /* Soft background for overall section (optional) */
-  padding: 1em 0;
-}
-
-/* "Card" wrapper for each row */
-.cardWrapper {
-  background-color: #fff;           /* Card background */
-  border-radius: 1rem;             /* Rounded corners */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle drop shadow */
-  margin: 1em auto;                /* Spacing between cards */
-  width: 100%;                      /* Centered width, adjust as needed */
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-/* Lift and deepen shadow on hover for a card-like effect */
-.cardWrapper:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-}
-
-/* The outer "row" containers become standard flex or block-level, 
-   but we rely on .cardWrapper for the card style now. */
+/* 
+  The containers that hold each "card" set:
+  - .gridContainer and .gridContainer2 
+  - styled as modern cards with a box shadow & hover effect
+*/
 .gridContainer,
 .gridContainer2 {
   display: grid;
   grid-gap: 0;
   width: 100%;
   text-align: left;
-  padding: 1.5em; /* Some padding inside the card */
+  font-family: "Quicksand", serif;
+
+  /* Card-like styling */
+  background-color: #fff; /* Card background */
+  border-radius: 0.75rem; /* Slightly rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  /* Margin to separate multiple cards vertically */
+  margin: 1em 0;
 }
 
-/***** INDIVIDUAL GRID LAYOUTS *****/
+/* Hover effect: slightly "lift" the card & intensify the shadow */
+.gridContainer:hover,
+.gridContainer2:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Container for the entire banner section */
+.totalContainerClass {
+  margin-top: 7em;
+  /* Optional: add padding for spacing around all cards */
+  padding: 2em 0;
+}
+
+/* 
+  Define columns for each "card":
+  - The first card has 40% for video, 60% for text
+  - The second card reverses it
+*/
 .gridContainer {
   grid-template-columns: 40% 60%;
 }
+
 .gridContainer2 {
   margin-top: 1em;
   grid-template-columns: 60% 40%;
 }
 
-/***** INNER CONTAINERS *****/
+/* 
+  container1 = video container
+  container2 = text container
+*/
 .container1,
 .container2 {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-/* Additional spacing for text blocks */
-.textAlightLeft2 {
+  /* Add some padding inside each half of the card */
   padding: 1em;
 }
-.textAlightLeft3 {
+
+/* Additional padding adjustments */
+.textAlignLeft2 {
+  padding: 1em;
+}
+
+.textAlignLeft3 {
   padding: 1em 1em 1em 3em;
 }
 
-/***** VIDEO STYLES *****/
+/* --- Video styling --- */
 .videoStyle {
   width: 70%;
-  transition: 0.5s ease-in-out;
-  margin: 0 auto;
-}
-.videoStyle:hover {
-  border-radius: 0;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 0.75rem; /* Make video corners match card rounding */
 }
 
-/* Rounded corners for the horizontal video by default */
-.HorizontalVideo {
+/* More pronounced rounding for the video (if you want 30px corners) */
+.horizontalVideo {
   border-radius: 30px;
 }
 
-/***** MEDIA QUERIES *****/
+/* 
+  If there's additional text styling for the content text 
+  beyond the left-aligned classes, define it here
+*/
+.textContent {
+  /* Adjust or leave empty if you just want the default styling */
+}
+
+/* --- Responsive Rules --- */
 @media screen and (max-width: 1029px) {
-  .TextContent {
+  .textContent {
     font-size: 1.4em !important;
   }
-  .HorizontalVideo {
+  .horizontalVideo {
     width: 90% !important;
     height: auto;
   }
@@ -102,29 +129,29 @@
 }
 
 @media screen and (max-width: 768px) {
-  .TextContent {
+  .textContent {
     font-size: 1.3em !important;
   }
 }
 
 @media screen and (max-width: 687px) {
-  .TextContent {
+  .textContent {
     font-size: 1em !important;
   }
-  .HorizontalVideo {
+  .horizontalVideo {
     width: 90% !important;
     height: auto;
   }
 }
 
 @media screen and (max-width: 430px) {
-  .TextContent {
+  .textContent {
     font-size: 0.8em !important;
   }
 }
 
 @media screen and (max-width: 390px) {
-  .TextContent {
+  .textContent {
     font-size: 0.7em !important;
   }
 }
