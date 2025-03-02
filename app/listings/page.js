@@ -1,7 +1,7 @@
 import Listings from "../../components/listings";
 
 export const metadata = {
-  title: "Our Listings - Journey Beauty",
+  title: "Vskin Beauty & Slimming - Services",
   description: "Explore our wide range of beauty services and offerings.",
 };
 

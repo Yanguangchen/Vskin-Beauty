@@ -129,8 +129,15 @@ function NavBar() {
             <Link href="/contact" style={linkStyle} className="navlinks">
               Contact
             </Link>
-            <Link href="https://cdn.botpress.cloud/webchat/v2.3/shareable.html?configUrl=https://files.bpcontent.cloud/2025/01/15/14/20250115141621-JOO3QMZ7.json" style={linkStyle} className="navlinks">
+            <Link
+              href="https://cdn.botpress.cloud/webchat/v2.3/shareable.html?configUrl=https://files.bpcontent.cloud/2025/01/15/14/20250115141621-JOO3QMZ7.json"
+              style={linkStyle}
+              className="navlinks"
+            >
               Chat with our AI
+            </Link>
+            <Link href="/Blogs" style={linkStyle} className="navlinks">
+              Why Us
             </Link>
           </div>
           {isMenuOpen && (
@@ -167,8 +174,15 @@ function NavBar() {
               >
                 Contact
               </Link>
-              <Link href="https://cdn.botpress.cloud/webchat/v2.3/shareable.html?configUrl=https://files.bpcontent.cloud/2025/01/15/14/20250115141621-JOO3QMZ7.json" style={linkStyle} className="navlinks">
+              <Link
+                href="https://cdn.botpress.cloud/webchat/v2.3/shareable.html?configUrl=https://files.bpcontent.cloud/2025/01/15/14/20250115141621-JOO3QMZ7.json"
+                style={linkStyle}
+                className="navlinks"
+              >
                 Chat with our AI
+              </Link>
+              <Link href="/Blogs" style={linkStyle} className="navlinks">
+                Why Us
               </Link>
             </div>
           )}

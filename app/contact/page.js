@@ -1,7 +1,7 @@
 import Contact from '../../components/contactinfo';
 
 export const metadata = {
-  title: 'Contact Us - Journey Beauty',
+  title: 'Contact Us - Vskin Beauty & Slimming',
   description: 'Reach out to Journey Beauty for appointments, inquiries, or feedback.',
 };
 
