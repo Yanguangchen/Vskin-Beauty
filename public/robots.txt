@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap:https://vskin-beauty.vercel.app/sitemap.xml
+Sitemap:https://www.vskinbeauty.shop/sitemap.xml
