@@ -12,6 +12,14 @@ export default function HomePage() {
       <div className="title1">
         <h1>Welcome to the world of VSkin Beauty & Slimming</h1>
       </div>
+      <script
+        async
+        src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"
+      ></script>
+      <script
+        async
+        src="https://files.bpcontent.cloud/2025/01/15/14/20250115141621-7O84I2EE.js"
+      ></script>
 
       {/* Use the imported HomePage component */}
       <MainPage />
