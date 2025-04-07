@@ -2,6 +2,7 @@ import "../styles/body.css";
 import "../styles/grid.css";
 import "../styles/navbar.css";
 import Navbar from "../components/navbar";
+import Link from "next/link";
 
 export const metadata = {
   title: "Vskin Beauty & Slimming",
@@ -180,6 +181,25 @@ export default function RootLayout({ children }) {
         ></script>
       </head>
       <body>
+      <div>
+        <Link href="/admin">
+            <button
+              style={{
+                position: "fixed",
+                top: "10px",
+                right: "10px",
+                padding: "10px 15px",
+                background: "#f667f3",
+                color: "#fff",
+                border: "none",
+                borderRadius: "4px",
+                cursor: "pointer",
+              }}
+            >
+              Sign in (Admin)
+            </button>
+          </Link>
+        </div>
         <Navbar />
         {children}
         <script

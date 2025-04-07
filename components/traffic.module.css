@@ -1,0 +1,12 @@
+@keyframes ping {
+    0% {
+        color: black;
+    }
+    100% {
+        color: green;
+    }
+}
+
+.ping {
+    animation: ping 0.8s infinite alternate;
+}

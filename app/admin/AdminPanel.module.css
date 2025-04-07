@@ -1,0 +1,91 @@
+/* AdminPanel.module.css */
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .welcome {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .button {
+    background-color: #0070f3;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .button:hover {
+    background-color: #005bb5;
+  }
+  
+  .form {
+    margin-bottom: 30px;
+  }
+  
+  .inputGroup {
+    margin-bottom: 15px;
+  }
+  
+  .inputGroup label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .inputGroup input,
+  .inputGroup textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .articleList {
+    margin-top: 30px;
+  }
+  
+  .articleCard {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+  }
+  
+  .articleCard h4 {
+    margin: 0 0 10px 0;
+    color: #0070f3;
+  }
+  
+  .articleCard p {
+    margin: 0 0 5px;
+  }
+  
+  .articleCard small {
+    color: #888;
+  }
+  
+  .loginContainer {
+    text-align: center;
+    padding: 40px;
+  }
+  

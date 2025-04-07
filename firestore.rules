@@ -1,0 +1,35 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // For MedTrustHub documents
+    match /MedTrustHub/{document=**} {
+      // Everyone can read
+      allow read: if true;
+      // Only allow writes if the authenticated user's UID is yg, Gia Han, or Thao
+      allow write: if request.auth != null &&
+                   (request.auth.uid == "kDlBzw5WA5U0Nim8w3fzWFqfs2J2" ||  // yg
+                    request.auth.uid == "AlqVuAEFbfVgA5kQnkLKXBNls62" ||  // Gia Han
+                    request.auth.uid == "NUy7jEUqE2coyD4cDPapirvMA2x1");   // Thao
+    }
+    
+    // For LeMotorEnterprise documents
+    match /LeMotorEnterprise/{document=**} {
+      // Everyone can read
+      allow read: if true;
+      // Only allow writes if the authenticated user's UID is the lemotor clerk
+      allow write: if request.auth != null &&
+                   request.auth.uid == "71wiHoB4kPYjXmgz6l91FyMituH3";
+    }
+    
+    // For vskinbeauty documents
+    match /vskinbeauty/{document=**} {
+      // Everyone can read
+      allow read: if true;
+      // Only allow writes if the authenticated user's UID is yg, Gia Han, or Thao
+      allow write: if request.auth != null &&
+                   (request.auth.uid == "kDlBzw5WA5U0Nim8w3fzWFqfs2J2" ||  // yg
+                    request.auth.uid == "AlqVuAEFbfVgA5kQnkLKXBNls62" ||  // Gia Han
+                    request.auth.uid == "NUy7jEUqE2coyD4cDPapirvMA2x1");   // Thao
+    }
+  }
+}
