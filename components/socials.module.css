@@ -27,6 +27,22 @@
   border-radius: 2em;
   font-size: 140%;
   background-color: #ffbac2;
+  /* Neumorphic styling */
+  box-shadow: 
+    12px 12px 24px rgba(0, 0, 0, 0.1),
+    -12px -12px 24px rgba(255, 255, 255, 0.8),
+    inset -2px -2px 4px rgba(0, 0, 0, 0.05),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sub-content:hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    16px 16px 32px rgba(0, 0, 0, 0.12),
+    -16px -16px 32px rgba(255, 255, 255, 0.8),
+    inset -3px -3px 6px rgba(0, 0, 0, 0.08),
+    inset 3px 3px 6px rgba(255, 255, 255, 0.7);
 }
 @media (max-width: 820px) {
   .sub-content {

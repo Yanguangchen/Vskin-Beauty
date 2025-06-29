@@ -150,13 +150,15 @@ const ContactForm = () => {
       alignItems: "center",
       justifyContent: "center",
       zIndex: 1000,
-      transition: "background-color 0.3s ease",
+      transition: "background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease",
       fontWeight: "bold",
       background: "darkRed",
       borderRadius: "10px",
       color: "white",
       padding: "1%",
       fontFamily: "Quicksand, sans-serif, helvetica, arial",
+      /* Neumorphic styling */
+      boxShadow: "8px 8px 16px rgba(0, 0, 0, 0.2), -8px -8px 16px rgba(255, 255, 255, 0.1), inset 0 0 0 rgba(0, 0, 0, 0)",
     },
 
     contactForm: {
@@ -167,7 +169,8 @@ const ContactForm = () => {
       height: "100%",
       backgroundColor: "#003c43",
       color: "white",
-      boxShadow: "-2px 0 5px rgba(0,0,0,0.3)",
+      /* Enhanced neumorphic shadow for form panel */
+      boxShadow: "-20px 0 40px rgba(0,0,0,0.3), inset 4px 0 8px rgba(255, 255, 255, 0.05)",
       transition: "right 0.3s ease-in-out",
       padding: "30px",
       boxSizing: "border-box",
@@ -199,30 +202,39 @@ const ContactForm = () => {
       padding: "10px",
       backgroundColor: "rgba(255,255,255,0.1)",
       border: "none",
-      borderRadius: "4px",
+      borderRadius: "8px",
       color: "white",
       fontFamily: "Quicksand, sans-serif, helvetica, arial",
+      /* Neumorphic styling for inputs */
+      boxShadow: "inset 4px 4px 8px rgba(0, 0, 0, 0.3), inset -4px -4px 8px rgba(255, 255, 255, 0.05)",
+      transition: "box-shadow 0.3s ease",
     },
     fullWidthInput: {
       width: "100%",
       padding: "10px",
       backgroundColor: "rgba(255,255,255,0.1)",
       border: "none",
-      borderRadius: "4px",
+      borderRadius: "8px",
       color: "white",
       marginBottom: "15px",
       fontFamily: "Quicksand, sans-serif, helvetica, arial",
+      /* Neumorphic styling for full width inputs */
+      boxShadow: "inset 4px 4px 8px rgba(0, 0, 0, 0.3), inset -4px -4px 8px rgba(255, 255, 255, 0.05)",
+      transition: "box-shadow 0.3s ease",
     },
     textarea: {
       width: "95%",
       padding: "10px",
       backgroundColor: "rgba(255,255,255,0.1)",
       border: "none",
-      borderRadius: "4px",
+      borderRadius: "8px",
       color: "white",
       minHeight: "100px",
       marginBottom: "15px",
       fontFamily: "Quicksand, sans-serif, helvetica, arial",
+      /* Neumorphic styling for textarea */
+      boxShadow: "inset 4px 4px 8px rgba(0, 0, 0, 0.3), inset -4px -4px 8px rgba(255, 255, 255, 0.05)",
+      transition: "box-shadow 0.3s ease",
     },
     submitButton: {
       width: "100%",
@@ -230,12 +242,14 @@ const ContactForm = () => {
       backgroundColor: "#ffffff",
       color: "#00514e",
       border: "none",
-      borderRadius: "4px",
+      borderRadius: "8px",
       cursor: "pointer",
       fontSize: "16px",
       fontWeight: "bold",
-      transition: "background-color 0.3s ease",
+      transition: "background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease",
       fontFamily: "Quicksand, sans-serif, helvetica, arial",
+      /* Neumorphic styling for submit button */
+      boxShadow: "6px 6px 12px rgba(0, 0, 0, 0.1), -6px -6px 12px rgba(255, 255, 255, 0.9), inset 0 0 0 rgba(0, 0, 0, 0)",
     },
     closeButton: {
       position: "absolute",
@@ -252,7 +266,18 @@ const ContactForm = () => {
 
   return (
     <>
-      <button style={styles.mailIcon} onClick={toggleForm}>
+      <button 
+        style={styles.mailIcon} 
+        onClick={toggleForm}
+        onMouseEnter={(e) => {
+          e.target.style.transform = 'translateY(-2px)';
+          e.target.style.boxShadow = '10px 10px 20px rgba(0, 0, 0, 0.25), -10px -10px 20px rgba(255, 255, 255, 0.15), inset -2px -2px 4px rgba(0, 0, 0, 0.1)';
+        }}
+        onMouseLeave={(e) => {
+          e.target.style.transform = 'translateY(0)';
+          e.target.style.boxShadow = '8px 8px 16px rgba(0, 0, 0, 0.2), -8px -8px 16px rgba(255, 255, 255, 0.1), inset 0 0 0 rgba(0, 0, 0, 0)';
+        }}
+      >
         ✉️
       </button>
       <div style={styles.contactForm}>
@@ -301,7 +326,18 @@ const ContactForm = () => {
             placeholder="Your questions or comments, appointment date and time"
             required
           />
-          <button style={styles.submitButton} type="submit">
+          <button 
+            style={styles.submitButton} 
+            type="submit"
+            onMouseEnter={(e) => {
+              e.target.style.transform = 'translateY(-2px)';
+              e.target.style.boxShadow = '8px 8px 16px rgba(0, 0, 0, 0.12), -8px -8px 16px rgba(255, 255, 255, 0.9), inset -2px -2px 4px rgba(0, 0, 0, 0.1)';
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.transform = 'translateY(0)';
+              e.target.style.boxShadow = '6px 6px 12px rgba(0, 0, 0, 0.1), -6px -6px 12px rgba(255, 255, 255, 0.9), inset 0 0 0 rgba(0, 0, 0, 0)';
+            }}
+          >
             Submit
           </button>
         </form>

@@ -1,6 +1,7 @@
 import "../styles/body.css";
 import "../styles/grid.css";
 import "../styles/navbar.css";
+import "../styles/footer.css";
 import Navbar from "../components/navbar";
 import Link from "next/link";
 
@@ -29,6 +30,8 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const currentYear = new Date().getFullYear();
+  
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BeautySalon",
@@ -67,7 +70,7 @@ export default function RootLayout({ children }) {
     ],
     branchOf: {
       "@type": "Organization",
-      name: "VSkin Beauty and Slimming",
+      name: "VSKin Beauty and Slimming",
     },
     location: {
       "@type": "Place",
@@ -202,6 +205,89 @@ export default function RootLayout({ children }) {
         </div>
         <Navbar />
         {children}
+        
+        {/* Footer */}
+        <footer className="footerStyle">
+          {/* Main Footer Content */}
+          <div className="footerMain">
+            <div className="footerSection">
+              <h3>VSkin Beauty & Slimming</h3>
+              <p>Your journey to beauty and confidence starts here. We specialize in advanced beauty treatments and slimming solutions to help you look and feel your best.</p>
+              <div className="socialLinks">
+                <a href="#" aria-label="Facebook">
+                  <i className="fab fa-facebook"></i>
+                </a>
+                <a href="#" aria-label="Instagram">
+                  <i className="fab fa-instagram"></i>
+                </a>
+                <a href="#" aria-label="WhatsApp">
+                  <i className="fab fa-whatsapp"></i>
+                </a>
+                <a href="#" aria-label="Email">
+                  <i className="fas fa-envelope"></i>
+                </a>
+              </div>
+            </div>
+
+            <div className="footerSection">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=61568387910807">Facebook Page</a></li>
+                <li><a href="/listings">Price List</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="https://cdn.botpress.cloud/webchat/v2.3/shareable.html?configUrl=https://files.bpcontent.cloud/2025/01/15/14/20250115141621-JOO3QMZ7.json">Chat with our AI</a></li>
+                <li><a href="/Blogs">Why Us</a></li>
+              </ul>
+            </div>
+
+            <div className="footerSection">
+              <h4>Location & Contact</h4>
+              <div className="contactInfo">
+                <p><i className="fas fa-phone"></i> 9880 7382</p>
+                <p><i className="fas fa-map-marker-alt"></i> Jurong Outlet: Blk 350 Jurong East Ave 1 #01-1239 (Level 2) Singapore 600350, Singapore, Singapore</p>
+                <p><i className="fas fa-clock"></i> Mon-Sat: 10AM-8PM</p>
+              </div>
+              <div className="newsletter">
+                <h5>Stay Updated</h5>
+                <p>Get beauty tips and exclusive offers</p>
+                <div className="newsletterForm">
+                  <input type="email" placeholder="Enter your email" />
+                  <button type="submit">Subscribe</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Section */}
+          <div className="bottomSection">
+            <div className="bottomContent">
+              <div className="copyright">
+                <p>&copy; {currentYear} VSkin Beauty & Slimming. All rights reserved.</p>
+              </div>
+              <div className="legalLinks">
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+                <a href="/sitemap">Sitemap</a>
+              </div>
+              <div className="developer">
+                <a href="https://webwizardsg.com/">
+                  <div className="wwContainer">
+                    <img
+                      className="wwLogo"
+                      src="/transparent.png"
+                      loading="lazy"
+                      alt="Logo to webwizardsg.com"
+                    />
+                  </div>
+                </a>
+                <p>Powered by React.Js & Next.Js, hosted on Vercel and secured by Cloudflare CDN</p>
+                <p>Developed by Chen Yanguang from Web Wizards</p>
+              </div>
+            </div>
+          </div>
+        </footer>
+        
         <script
           async
           src="https://files.bpcontent.cloud/2025/01/15/14/20250115141621-7O84I2EE.js"

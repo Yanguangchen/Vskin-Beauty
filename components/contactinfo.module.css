@@ -42,8 +42,12 @@
   font-size: 1.1rem;
   line-height: 1.5;
 
-  /* Box Shadow for depth */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /* Enhanced neumorphic box shadow for depth */
+  box-shadow: 
+    12px 12px 24px rgba(0, 0, 0, 0.15),
+    -12px -12px 24px rgba(255, 255, 255, 0.3),
+    inset -2px -2px 4px rgba(0, 0, 0, 0.1),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.4);
 
   /* Transition for smooth hover effect */
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
@@ -58,7 +62,13 @@
 /* --- Hover lift effect --- */
 .subContent:hover {
   transform: translateY(-6px); /* Slightly increased lift for prominence */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  
+  /* Enhanced neumorphic hover shadow */
+  box-shadow: 
+    16px 16px 32px rgba(0, 0, 0, 0.2),
+    -16px -16px 32px rgba(255, 255, 255, 0.4),
+    inset -4px -4px 8px rgba(0, 0, 0, 0.15),
+    inset 4px 4px 8px rgba(255, 255, 255, 0.6);
 
   /* Optional: Slightly adjust the gradient on hover */
   background: linear-gradient(135deg, #d5c787, #967f19, #d5c787);

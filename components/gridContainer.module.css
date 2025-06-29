@@ -5,6 +5,12 @@
   width: 100%;
   margin-top: 3%;
   flex-direction: column;
+  /* Neumorphic container styling */
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 
+    10px 10px 20px rgba(0, 0, 0, 0.08),
+    -10px -10px 20px rgba(255, 255, 255, 0.9);
 }
 .grid-wrapper {
   display: grid;
@@ -27,10 +33,21 @@
   height: 100%;
   border-radius: 1.5em;
   transition: 1s ease-in-out;
+  /* Neumorphic styling for videos */
+  box-shadow: 
+    12px 12px 24px rgba(0, 0, 0, 0.1),
+    -12px -12px 24px rgba(255, 255, 255, 0.9),
+    inset 0 0 0 rgba(0, 0, 0, 0);
 }
 
 .grid-video:hover {
   scale: 1.1;
+  /* Enhanced neumorphic hover effect */
+  box-shadow: 
+    16px 16px 32px rgba(0, 0, 0, 0.15),
+    -16px -16px 32px rgba(255, 255, 255, 0.9),
+    inset -2px -2px 8px rgba(0, 0, 0, 0.05),
+    inset 2px 2px 8px rgba(255, 255, 255, 0.7);
 }
 
 @media only screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) {

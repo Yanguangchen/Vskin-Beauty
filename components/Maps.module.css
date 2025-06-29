@@ -10,6 +10,12 @@
   flex-direction: column;
   height: 100%;
   margin-top: 10%;
+  /* Neumorphic styling */
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 
+    10px 10px 20px rgba(0, 0, 0, 0.08),
+    -10px -10px 20px rgba(255, 255, 255, 0.9);
 }
 .address {
   font-size: 1.5em;
@@ -22,6 +28,14 @@
 .grid-maps {
   height: 600px;
   border: 0 !important;
+  /* Neumorphic styling for map */
+  border-radius: 16px;
+  box-shadow: 
+    12px 12px 24px rgba(0, 0, 0, 0.1),
+    -12px -12px 24px rgba(255, 255, 255, 0.9),
+    inset -2px -2px 4px rgba(0, 0, 0, 0.05),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.5);
+  overflow: hidden;
 }
 .grid-maps iframe {
   border: none;

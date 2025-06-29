@@ -3,6 +3,13 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  /* Neumorphic styling */
+  padding: 2rem;
+  margin: 1rem;
+  border-radius: 20px;
+  box-shadow: 
+    10px 10px 20px rgba(0, 0, 0, 0.08),
+    -10px -10px 20px rgba(255, 255, 255, 0.9);
 }
 .grid-wrapper {
   display: grid;
