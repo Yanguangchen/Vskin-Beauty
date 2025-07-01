@@ -117,48 +117,6 @@ function Maps() {
                zIndex: 2,
              }}
           >
-            {/* Decorative elements around title */}
-            <div
-              style={{
-                position: 'absolute',
-                top: '-20px',
-                left: '20px',
-                width: '12px',
-                height: '12px',
-                borderRadius: '50%',
-                background: 'linear-gradient(135deg, rgba(101, 45, 144, 0.6), rgba(64, 33, 92, 0.4))',
-                boxShadow: '4px 4px 8px rgba(0, 0, 0, 0.1), -2px -2px 4px rgba(255, 255, 255, 0.7)',
-                animation: isVisible ? 'floatUpDown 3s ease-in-out infinite' : 'none',
-              }}
-            />
-            <div
-              style={{
-                position: 'absolute',
-                top: '-15px',
-                right: '30px',
-                width: '8px',
-                height: '8px',
-                borderRadius: '50%',
-                background: 'linear-gradient(135deg, rgba(64, 33, 92, 0.6), rgba(101, 45, 144, 0.4))',
-                boxShadow: '3px 3px 6px rgba(0, 0, 0, 0.1), -1px -1px 2px rgba(255, 255, 255, 0.6)',
-                animation: isVisible ? 'floatUpDown 3s ease-in-out infinite 0.5s' : 'none',
-              }}
-            />
-            <div
-              style={{
-                position: 'absolute',
-                bottom: '-10px',
-                left: '50%',
-                transform: 'translateX(-50%)',
-                width: '6px',
-                height: '6px',
-                borderRadius: '50%',
-                background: 'linear-gradient(135deg, rgba(101, 45, 144, 0.5), rgba(64, 33, 92, 0.3))',
-                boxShadow: '2px 2px 4px rgba(0, 0, 0, 0.1), -1px -1px 2px rgba(255, 255, 255, 0.5)',
-                animation: isVisible ? 'floatUpDown 3s ease-in-out infinite 1s' : 'none',
-              }}
-            />
-            
             <h1 style={{
               animation: isVisible ? 'titleGlow 3s ease-in-out infinite' : 'none',
               background: 'linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 50%, #2a2a2a 100%)',
@@ -171,22 +129,8 @@ function Maps() {
               letterSpacing: '2px',
                              transform: isVisible ? 'translateY(0)' : 'translateY(15px)',
                transition: 'transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s',
+              textAlign: 'center',
             }}>
-              <span style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                right: 0,
-                bottom: 0,
-                background: 'linear-gradient(135deg, rgba(101, 45, 144, 0.8) 0%, rgba(64, 33, 92, 0.6) 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-                transform: 'translate(2px, 2px)',
-                zIndex: -1,
-              }}>
-                Locate Us!
-              </span>
               Locate Us!
             </h1>
           </div>

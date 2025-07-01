@@ -227,8 +227,8 @@ const AboutSection = () => {
       {/* 3 cards laid out side by side in a responsive grid */}
       <div style={styles.grid}>
         <Card
-          title="Non-Invasive Treatments"
-          description="Experience revolutionary non-invasive procedures that provide lasting results without needles or downtime."
+          title="Advanced Aesthetic Technology"
+          description="Experience revolutionary procedures that provide lasting results with no needles required. Safe, effective, and comfortable for all skin types."
         />
         <Card
           title="Comprehensive Solutions"
@@ -236,7 +236,7 @@ const AboutSection = () => {
         />
         <Card
           title="Affordable Pricing"
-          description="Transparent prices with no hidden fees—experience premium services starting at just $380 for first-time trials."
+          description="Transparent prices with no hidden fees—experience premium services starting at just $158 for first-time trials."
         />
       </div>
     </div>

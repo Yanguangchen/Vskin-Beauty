@@ -9,7 +9,7 @@
   align-items: center;
   flex-direction: column;
   height: 100%;
-  margin-top: 10%;
+  margin-top: 0;
   /* Neumorphic styling */
   padding: 2rem;
   border-radius: 20px;
@@ -36,6 +36,10 @@
     inset -2px -2px 4px rgba(0, 0, 0, 0.05),
     inset 2px 2px 4px rgba(255, 255, 255, 0.5);
   overflow: hidden;
+  margin: 0 auto;
+  display: block;
+  max-width: 90vw;
+  width: 800px;
 }
 .grid-maps iframe {
   border: none;
