@@ -107,8 +107,8 @@ export default function RootLayout({ children }) {
         <meta name="author" content="Web Wizards" />
         <meta name="robots" content="index, follow" />
         <meta name="googlebot" content="index, follow" />
-        <link rel="icon" href="/icon.png" />
-        <link rel="apple-touch-icon" href="/icon.png" />
+        <link rel="icon" href="/Assets/apple-icon.png" />
+        <link rel="apple-touch-icon" href="/Assets/apple-icon.png" />
         <meta property="og:url" content="https://vskin-beauty.vercel.app/" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Vskin Beauty & Slimming" />
