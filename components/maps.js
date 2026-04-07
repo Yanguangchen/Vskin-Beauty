@@ -17,8 +17,9 @@ function Maps() {
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.target === containerRef.current) {
-          setIsVisible(entry.isIntersecting);
+        if (entry.isIntersecting && entry.target === containerRef.current) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
         }
       });
     }, observerOptions);
@@ -118,18 +119,14 @@ function Maps() {
              }}
           >
             <h1 style={{
-              animation: isVisible ? 'titleGlow 3s ease-in-out infinite' : 'none',
-              background: 'linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 50%, #2a2a2a 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-              position: 'relative',
+              color: '#1a1a1a',
               fontSize: '2.5rem',
-              fontWeight: 'bold',
+              fontWeight: '800',
               letterSpacing: '2px',
-                             transform: isVisible ? 'translateY(0)' : 'translateY(15px)',
-               transition: 'transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s',
               textAlign: 'center',
+              opacity: isVisible ? 1 : 0,
+              transform: isVisible ? 'translateY(0)' : 'translateY(15px)',
+              transition: 'opacity 0.6s ease, transform 0.6s ease',
             }}>
               Locate Us!
             </h1>

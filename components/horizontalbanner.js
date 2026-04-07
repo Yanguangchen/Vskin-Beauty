@@ -19,11 +19,10 @@ function HorizontalBanner() {
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.target === card1Ref.current) {
-          setIsCard1Visible(entry.isIntersecting);
-        }
-        if (entry.target === card2Ref.current) {
-          setIsCard2Visible(entry.isIntersecting);
+        if (entry.isIntersecting) {
+          if (entry.target === card1Ref.current) setIsCard1Visible(true);
+          if (entry.target === card2Ref.current) setIsCard2Visible(true);
+          observer.unobserve(entry.target);
         }
       });
     }, observerOptions);
@@ -38,25 +37,14 @@ function HorizontalBanner() {
     <>
       <style>
         {`
-          @keyframes slideInLeft {
+          @keyframes fadeInUp {
             from {
               opacity: 0;
-              transform: translateX(-20px) translateY(15px) scale(0.98);
+              transform: translateY(20px);
             }
             to {
               opacity: 1;
-              transform: translateX(0) translateY(0) scale(1);
-            }
-          }
-          
-          @keyframes slideInRight {
-            from {
-              opacity: 0;
-              transform: translateX(20px) translateY(15px) scale(0.98);
-            }
-            to {
-              opacity: 1;
-              transform: translateX(0) translateY(0) scale(1);
+              transform: translateY(0);
             }
           }
           
@@ -101,7 +89,8 @@ function HorizontalBanner() {
             ref={card1Ref}
             className={`${styles.gridContainer} neumorphic-banner-card`}
             style={{
-              animation: isCard1Visible ? 'slideInLeft 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94)' : 'none',
+              animation: isCard1Visible ? 'fadeInUp 0.6s ease forwards' : 'none',
+              opacity: isCard1Visible ? 1 : 0,
               transform: isCard1Hovered ? 'translateY(-3px) scale(1.005)' : 'translateY(0) scale(1)',
               transition: 'all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
             }}
@@ -191,7 +180,8 @@ function HorizontalBanner() {
             ref={card2Ref}
             className={`${styles.gridContainer2} neumorphic-banner-card`}
             style={{
-              animation: isCard2Visible ? 'slideInRight 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s both' : 'none',
+              animation: isCard2Visible ? 'fadeInUp 0.6s ease 0.15s forwards' : 'none',
+              opacity: isCard2Visible ? 1 : 0,
               transform: isCard2Hovered ? 'translateY(-3px) scale(1.005)' : 'translateY(0) scale(1)',
               transition: 'all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
             }}

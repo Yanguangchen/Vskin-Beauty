@@ -22,11 +22,6 @@ export default function HomePage() {
 
       {/* Use the imported HomePage component */}
       <MainPage />
-      <div className="sk-ww-facebook-page-posts" data-embed-id="25510702"></div>
-      <script
-        src="https://widgets.sociablekit.com/facebook-page-posts/widget.js"
-        defer
-      ></script>
     </main>
   );
 }

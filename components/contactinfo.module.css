@@ -13,9 +13,10 @@
 
 /* Main heading styling (instead of global h1) */
 .contactTitle {
-  color: #051d40;
+  color: #1a1a1a;
   font-size: 2rem;
   margin-bottom: 0.5em;
+  font-weight: 800;
 }
 
 /* --- Grid container for the two columns --- */
@@ -35,64 +36,66 @@
 
 /* --- Each card (left & right columns) --- */
 .subContent {
-  /* Gradient background */
-  background: linear-gradient(135deg, #967f19, #d5c787);
+  background: linear-gradient(135deg, #652D90 0%, #40215C 100%);
   border-radius: 1.5rem;
   padding: 2rem;
   font-size: 1.1rem;
   line-height: 1.5;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 
-  /* Enhanced neumorphic box shadow for depth */
-  box-shadow: 
-    12px 12px 24px rgba(0, 0, 0, 0.15),
-    -12px -12px 24px rgba(255, 255, 255, 0.3),
-    inset -2px -2px 4px rgba(0, 0, 0, 0.1),
-    inset 2px 2px 4px rgba(255, 255, 255, 0.4);
+  box-shadow:
+    15px 15px 30px rgba(0, 0, 0, 0.25),
+    -15px -15px 30px rgba(255, 255, 255, 0.1),
+    inset -3px -3px 6px rgba(0, 0, 0, 0.2),
+    inset 3px 3px 6px rgba(255, 255, 255, 0.1),
+    0 0 20px rgba(101, 45, 144, 0.3);
 
-  /* Transition for smooth hover effect */
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, background 0.4s ease;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
 }
 
 /* --- Hover lift effect --- */
 .subContent:hover {
-  transform: translateY(-6px); /* Slightly increased lift for prominence */
-  
-  /* Enhanced neumorphic hover shadow */
-  box-shadow: 
-    16px 16px 32px rgba(0, 0, 0, 0.2),
-    -16px -16px 32px rgba(255, 255, 255, 0.4),
-    inset -4px -4px 8px rgba(0, 0, 0, 0.15),
-    inset 4px 4px 8px rgba(255, 255, 255, 0.6);
-
-  /* Optional: Slightly adjust the gradient on hover */
-  background: linear-gradient(135deg, #d5c787, #967f19, #d5c787);
+  transform: translateY(-8px) scale(1.02);
+  background: linear-gradient(135deg, #7a3ba3 0%, #4d2870 100%);
+  box-shadow:
+    20px 20px 40px rgba(0, 0, 0, 0.3),
+    -20px -20px 40px rgba(255, 255, 255, 0.15),
+    inset -5px -5px 10px rgba(0, 0, 0, 0.3),
+    inset 5px 5px 10px rgba(255, 255, 255, 0.15),
+    0 0 30px rgba(101, 45, 144, 0.5),
+    0 0 60px rgba(101, 45, 144, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* --- Contact paragraph --- */
 .pStyle {
-  margin: 0; /* Remove default margin */
-  color: #000000; /* Ensure text is readable against the gradient */
+  margin: 0;
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 /* --- Sub-heading (Service Hours) --- */
 .h3Style {
-  color: #000000; /* White text for contrast */
+  color: #fff;
   margin-bottom: 1rem;
   font-size: 1.25rem;
   font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.5px;
 }
 
 /* --- Service hours text --- */
 .openingTime {
   font-weight: 600;
   margin: 0;
-  color: #000000; /* White text for consistency */
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 /* --- Responsive Breakpoints --- */

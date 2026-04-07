@@ -8,7 +8,6 @@ const Listings = lazy(() => import("./listings"));
 const Contactparent = lazy(() => import("./contactParent"));
 const Socials = lazy(() => import("./socials"));
 const AboutSection = lazy(() => import("./about"));
-const Quote = lazy(() => import("./quote"));
 const Horizontalbanner = lazy(() => import("./horizontalbanner"));
 const ReviewCarousell = lazy(() => import("./reviewCarousell"));
 
@@ -63,10 +62,6 @@ function Homepage() {
       </Suspense>
 
       <Suspense fallback={<Loading />}>
-        <Quote />
-      </Suspense>
-
-      <Suspense fallback={<Loading />}>
         <Horizontalbanner />
       </Suspense>
 
@@ -81,10 +76,6 @@ function Homepage() {
       <Suspense fallback={<Loading />}>
         <Contactparent />
       </Suspense>
-      <script
-        src="https://widgets.sociablekit.com/facebook-page-posts/widget.js"
-        defer
-      ></script>
     </div>
   );
 }

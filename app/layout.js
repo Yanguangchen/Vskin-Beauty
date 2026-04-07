@@ -184,25 +184,6 @@ export default function RootLayout({ children }) {
         ></script>
       </head>
       <body>
-      <div>
-        <Link href="/admin">
-            <button
-              style={{
-                position: "fixed",
-                top: "10px",
-                right: "10px",
-                padding: "10px 15px",
-                background: "#f667f3",
-                color: "#fff",
-                border: "none",
-                borderRadius: "4px",
-                cursor: "pointer",
-              }}
-            >
-              Sign in (Admin)
-            </button>
-          </Link>
-        </div>
         <Navbar />
         {children}
         
@@ -213,20 +194,6 @@ export default function RootLayout({ children }) {
             <div className="footerSection">
               <h3>VSkin Beauty & Slimming</h3>
               <p>Your journey to beauty and confidence starts here. We specialize in advanced beauty treatments and slimming solutions to help you look and feel your best.</p>
-              <div className="socialLinks">
-                <a href="#" aria-label="Facebook">
-                  <i className="fab fa-facebook"></i>
-                </a>
-                <a href="#" aria-label="Instagram">
-                  <i className="fab fa-instagram"></i>
-                </a>
-                <a href="#" aria-label="WhatsApp">
-                  <i className="fab fa-whatsapp"></i>
-                </a>
-                <a href="#" aria-label="Email">
-                  <i className="fas fa-envelope"></i>
-                </a>
-              </div>
             </div>
 
             <div className="footerSection">
@@ -271,18 +238,7 @@ export default function RootLayout({ children }) {
                 <a href="/sitemap">Sitemap</a>
               </div>
               <div className="developer">
-                <a href="https://webwizardsg.com/">
-                  <div className="wwContainer">
-                    <img
-                      className="wwLogo"
-                      src="/transparent.png"
-                      loading="lazy"
-                      alt="Logo to webwizardsg.com"
-                    />
-                  </div>
-                </a>
                 <p>Powered by React.Js & Next.Js, hosted on Vercel and secured by Cloudflare CDN</p>
-                <p>Developed by Chen Yanguang from Web Wizards</p>
               </div>
             </div>
           </div>

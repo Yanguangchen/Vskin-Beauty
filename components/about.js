@@ -196,30 +196,7 @@ const AboutSection = () => {
         }}
       />
       
-      <h1 style={{
-        ...styles.sectionTitle,
-        background: 'linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%)',
-        WebkitBackgroundClip: 'text',
-        WebkitTextFillColor: 'transparent',
-        backgroundClip: 'text',
-        position: 'relative',
-      }}>
-        <span style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          background: 'linear-gradient(135deg, rgba(101, 45, 144, 0.8) 0%, rgba(64, 33, 92, 0.6) 100%)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          backgroundClip: 'text',
-          transform: 'translate(1px, 1px)',
-          zIndex: -1,
-        }}>
-          Let us bring out the best in you, shine with confidence, and embrace
-          your beauty
-        </span>
+      <h1 style={styles.sectionTitle}>
         Let us bring out the best in you, shine with confidence, and embrace
         your beauty
       </h1>
@@ -247,7 +224,7 @@ const AboutSection = () => {
 const styles = {
   mainContainer: {
     maxWidth: "64rem",
-    margin: "0 auto",
+    margin: "3rem auto 0",
     padding: "2.5rem",
     borderRadius: "2rem",
     /* Advanced neumorphic container styling */
