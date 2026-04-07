@@ -30,10 +30,10 @@ const pillars = [
   {
     title: "FDA & HSA Approved",
     description:
-      "VSkin's technology meets the rigorous standards set by both the US Food & Drug Administration (FDA) and Singapore's Health Sciences Authority (HSA). These approvals are not cosmetic — they are clinical certifications of safety and efficacy.",
+      "VSkin's technology meets the rigorous standards set by both the US Food & Drug Administration (FDA) and Singapore's Health Sciences Authority (HSA). These approvals are not cosmetic — they are official certifications of safety and efficacy.",
   },
   {
-    title: "Clinically Backed Results",
+    title: "Scientifically Backed Results",
     description:
       "Our treatments deliver measurable outcomes: fat reduction, skin tightening, wrinkle smoothing, and serum absorption — all without the risks associated with needles or surgery. Results you can see, delivered safely.",
   },
@@ -192,7 +192,7 @@ export default function AboutPage() {
               margin: "0 auto",
             }}
           >
-            VSkin Beauty & Slimming uses VJet technology — a clinically approved,
+            VSkin Beauty & Slimming uses VJet technology — an officially approved,
             pneumatic serum delivery system that achieves premium aesthetic results
             with absolutely no needles, no surgery, and no downtime.
           </p>
@@ -273,7 +273,7 @@ export default function AboutPage() {
           }}
         >
           <p style={{ fontSize: "1.1rem", color: "#555", marginBottom: "1.5rem" }}>
-            Experience the difference at our Jurong East clinic.
+            Experience the difference at our Jurong East outlet.
           </p>
           <a
             href="/contact"

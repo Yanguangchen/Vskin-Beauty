@@ -11,7 +11,7 @@ const faqs = [
   {
     question: "Is VSkin's technology safe?",
     answer:
-      "Absolutely. Our VJet technology is both FDA (US Food and Drug Administration) and HSA (Singapore Health Sciences Authority) compliant. These are rigorous clinical standards that verify both the safety and the efficacy of our treatments.",
+      "Absolutely. Our VJet technology is both FDA (US Food and Drug Administration) and HSA (Singapore Health Sciences Authority) compliant. These are rigorous scientific standards that verify both the safety and the efficacy of our treatments.",
   },
   {
     question: "Do I need surgery or anaesthesia?",
@@ -41,7 +41,7 @@ const faqs = [
   {
     question: "How much does a first-time trial cost?",
     answer:
-      "First-time trial sessions start from $158. We believe premium, clinically safe aesthetic care should be accessible. There are no hidden fees — pricing is fully transparent before you commit to any treatment.",
+      "First-time trial sessions start from $158. We believe premium, scientifically safe aesthetic care should be accessible. There are no hidden fees — pricing is fully transparent before you commit to any treatment.",
   },
   {
     question: "Where is VSkin located?",

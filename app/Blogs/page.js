@@ -3,7 +3,7 @@ import TodaysArticle from "../todays-article/page";
 export const metadata = {
   title: "Why Us – VSkin Beauty & Slimming",
   description:
-    "Learn why VSkin Beauty & Slimming is Singapore's leading non-invasive beauty and slimming clinic powered by VJet Technology.",
+    "Learn why VSkin Beauty & Slimming is Singapore's leading non-invasive beauty and slimming destination powered by VJet Technology.",
 };
 
 const treatments = [
@@ -34,7 +34,7 @@ const reasons = [
   "100% non-invasive and painless treatments",
   "No surgery, no needles, no downtime — resume activities immediately",
   "Scientifically proven fat burning and skin rejuvenation technology",
-  "FDA and HSA compliant — clinically verified safety",
+  "FDA and HSA compliant — scientifically verified safety",
   "No hidden fees, no GST, and affordable pricing",
   "Exclusive 20% discounts for students & seniors",
 ];

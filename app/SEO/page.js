@@ -12,7 +12,7 @@ export default function ListingsPage() {
 
       <p>
         Welcome to <strong>VSkin Beauty and Slimming</strong>, your trusted
-        clinic for <strong>non-invasive slimming treatments</strong>,
+        destination for <strong>non-invasive slimming treatments</strong>,
         <strong>fat melting treatments</strong>, and{" "}
         <strong>skin tightening solutions in Singapore</strong>. Our advanced
         <strong>VSkin Technology</strong> delivers pain-free, long-lasting
