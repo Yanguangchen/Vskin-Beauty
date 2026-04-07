@@ -61,7 +61,7 @@ const VideoCard = ({ src, title, description, index }) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div style={{ position: "relative", paddingTop: "56.25%", background: "rgba(0,0,0,0.3)" }}>
+      <div style={{ position: "relative", paddingTop: "177.78%", background: "rgba(0,0,0,0.3)" }}>
         <video
           autoPlay
           muted
