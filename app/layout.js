@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import "../styles/body.css";
 import "../styles/grid.css";
 import "../styles/navbar.css";
