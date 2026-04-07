@@ -3,7 +3,7 @@ import styles from "./listings.module.css";
 
 function Listings() {
   return (
-    <>
+    <></>
   );
 }
 
