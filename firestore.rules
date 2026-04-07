@@ -1,35 +1,166 @@
 rules_version = '2';
+
 service cloud.firestore {
   match /databases/{database}/documents {
-    // For MedTrustHub documents
-    match /MedTrustHub/{document=**} {
-      // Everyone can read
-      allow read: if true;
-      // Only allow writes if the authenticated user's UID is yg, Gia Han, or Thao
-      allow write: if request.auth != null &&
-                   (request.auth.uid == "kDlBzw5WA5U0Nim8w3fzWFqfs2J2" ||  // yg
-                    request.auth.uid == "AlqVuAEFbfVgA5kQnkLKXBNls62" ||  // Gia Han
-                    request.auth.uid == "NUy7jEUqE2coyD4cDPapirvMA2x1");   // Thao
+
+    // --- Helper Functions for Admin UIDs ---
+    function isStandardAdmin() {
+      return request.auth.uid in [
+        "kDlBzw5WA5U0Nim8w3fzWFqfs2J2",
+        "AlqVuAEFbfVgA5kKQnkLKXBNls62",
+        "gFIHLDHKJdX0xKuyJHkVrkoqquQ2"
+      ];
     }
-    
-    // For LeMotorEnterprise documents
-    match /LeMotorEnterprise/{document=**} {
-      // Everyone can read
-      allow read: if true;
-      // Only allow writes if the authenticated user's UID is the lemotor clerk
-      allow write: if request.auth != null &&
-                   request.auth.uid == "71wiHoB4kPYjXmgz6l91FyMituH3";
+
+    function isLeMotorAdmin() {
+      return isStandardAdmin() || request.auth.uid == "71wiHoB4kPYjXmgz6l91FyMituH3";
     }
-    
-    // For vskinbeauty documents
+
+    function isKsqAdmin() {
+      return isStandardAdmin() || request.auth.uid in [
+        "dxYmpOGb57VJy8GO5z5dZoiuFA83",
+        "134K78rqvdhoXe8vB9wJsYkA99B2"
+      ];
+    }
+
+    function isVibrantAdmin() {
+      return isStandardAdmin() || request.auth.uid == "ZFqiERuPDTav9CC0HvRy54KTHuG2";
+    }
+
+    function isArdenAdmin() {
+      return isStandardAdmin() || request.auth.uid == "77Lg5n55EkhFvpmeO1DanJiwsz52";
+    }
+
+    function isRainsAndCocoAdmin() {
+      return isStandardAdmin() || request.auth.uid == "NEn87t4rCzVCxBhd1dptAmEkp873";
+    }
+
+    function isKareAdmin() {
+      return isStandardAdmin() || request.auth.uid == "2grg5nlFJyWNbN3ILhRsr3GOtsy2";
+    }
+
+    function isVskinAdmin() {
+      return isStandardAdmin();
+    }
+    // --- End of Helper Functions ---
+
+    //--------------------V S K I N  B E A U T Y -------------------//
+    // VSkin Beauty blog articles & content
     match /vskinbeauty/{document=**} {
-      // Everyone can read
       allow read: if true;
-      // Only allow writes if the authenticated user's UID is yg, Gia Han, or Thao
-      allow write: if request.auth != null &&
-                   (request.auth.uid == "kDlBzw5WA5U0Nim8w3fzWFqfs2J2" ||  // yg
-                    request.auth.uid == "AlqVuAEFbfVgA5kQnkLKXBNls62" ||  // Gia Han
-                    request.auth.uid == "NUy7jEUqE2coyD4cDPapirvMA2x1");   // Thao
+      allow write: if request.auth != null && isVskinAdmin();
+    }
+    //------------------------------------------------------------------//
+
+    match /srtec/{document=**} {
+      allow read: if true;
+      allow write: if request.auth != null && isStandardAdmin();
+    }
+
+    match /LeMotorEnterprise/{document=**} {
+      allow read: if true;
+      allow write: if request.auth != null && isLeMotorAdmin();
+    }
+
+    match /webwizards/{document=**} {
+      allow read: if true;
+      allow write: if request.auth != null && isStandardAdmin();
+    }
+
+    match /shebella/{document=**} {
+      allow read: if true;
+      allow write: if request.auth != null && isStandardAdmin();
+    }
+
+    match /oscars/{document=**} {
+      allow read: if true;
+      allow write: if request.auth != null && isStandardAdmin();
+    }
+
+    match /ksq/{document=**} {
+      allow read: if true;
+      allow write: if request.auth != null && isKsqAdmin();
+    }
+
+    match /ksqbiodata/{document=**} {
+      allow read: if true;
+      allow write: if request.auth != null && isKsqAdmin();
+    }
+
+    //--------------------M A I D  A G E N C I E S -------------------//
+    match /vibrant/{document=**} {
+      allow read: if true;
+      allow write: if request.auth != null && isVibrantAdmin();
+    }
+
+    match /vibrantbiodata/{document=**} {
+      allow read: if true;
+      allow write: if request.auth != null && isVibrantAdmin();
+    }
+    //------------------------------------------------------------------//
+
+    match /arden/{document=**} {
+      allow read: if true;
+      allow write: if request.auth != null && isArdenAdmin();
+    }
+
+    match /ardenServicesMenu/{document=**} {
+      allow read: if true;
+      allow write: if request.auth != null && isArdenAdmin();
+    }
+    //------------------------------------------------------------------//
+
+    match /RainsAndCoco/{document=**} {
+      allow read: if true;
+      allow write: if request.auth != null && isRainsAndCocoAdmin();
+    }
+
+    match /rainsAndCocoServicesMenu/{document=**} {
+      allow read: if true;
+      allow write: if request.auth != null && isRainsAndCocoAdmin();
+    }
+    //------------------------------------------------------------------//
+
+    match /menuImages/{document=**} {
+      allow read: if true;
+      allow write: if request.auth != null && isArdenAdmin();
+    }
+
+    match /rainsAndCocoMenuImages/{document=**} {
+      allow read: if true;
+      allow write: if request.auth != null && isRainsAndCocoAdmin();
+    }
+
+    match /kare/{document=**} {
+      allow read: if true;
+      allow write: if request.auth != null && isKareAdmin();
+    }
+  }
+}
+
+service firebase.storage {
+  match /b/{bucket}/o {
+
+    function isStorageAdmin() {
+      return request.auth.uid in [
+        "kDlBzw5WA5U0Nim8w3fzWFqfs2J2",
+        "AlqVuAEFbfVgA5kKQnkLKXBNls62",
+        "gFIHLDHKJdX0xKuyJHkVrkoqquQ2",
+        "134K78rqvdhoXe8vB9wJsYkA99B2",
+        "dxYmpOGb57VJy8GO5z5dZoiuFA83",
+        "ZFqiERuPDTav9CC0HvRy54KTHuG2"
+      ];
+    }
+
+    match /biodata/{allPaths=**} {
+      allow read: if true;
+      allow write: if request.auth != null && isStorageAdmin();
+    }
+
+    // VSkin Beauty article images
+    match /vskinbeauty/{allPaths=**} {
+      allow read: if true;
+      allow write: if request.auth != null && isStorageAdmin();
     }
   }
 }

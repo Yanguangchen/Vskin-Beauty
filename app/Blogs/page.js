@@ -1,352 +1,184 @@
-import TodaysArticle from "../todays-article/page"; // adjust the relative path if needed
+import TodaysArticle from "../todays-article/page";
 
 export const metadata = {
-  title: "Our Listings - Journey Beauty",
-  description: "Explore our wide range of beauty services and offerings.",
+  title: "Why Us – VSkin Beauty & Slimming",
+  description:
+    "Learn why VSkin Beauty & Slimming is Singapore's leading non-invasive beauty and slimming clinic powered by VJet Technology.",
 };
 
-export default function ListingsPage() {
+const treatments = [
+  {
+    emoji: "🔥",
+    title: "VSkin Fat Melt",
+    subtitle: "Say Goodbye to Stubborn Fat",
+    body: "Struggling with belly fat, love handles, or arm fat? Our VSkin Fat Melt treatment uses high-tech pneumatic gas-driven technology to break down fat cells, stimulate lymphatic drainage, and tighten skin — all in a relaxing, pain-free session.",
+    note: "Results can be long-lasting. Maintaining a healthy diet and active lifestyle maximises your outcome.",
+  },
+  {
+    emoji: "✨",
+    title: "VSkin Nose Lifting Collagen",
+    subtitle: "Non-Surgical Nose Enhancement",
+    body: "Want a sharper, more defined nose without surgery? Our VSkin Nose Lifting Collagen treatment stimulates collagen growth in the nasal bridge and tip, providing a natural lift and contour that lasts 16–18 months, with peak results between 8–12 months.",
+    note: null,
+  },
+  {
+    emoji: "💧",
+    title: "Korean Aqua Peel Facial",
+    subtitle: "Achieve Glass Skin",
+    body: "Inspired by Korean skincare, our Aqua Peel Facial deeply hydrates, exfoliates, and revitalises your skin. Using a blend of hydration boosters, antioxidants, and gentle exfoliants, it removes dead skin cells and enhances moisture retention for a healthy, youthful glow.",
+    note: null,
+  },
+];
+
+const reasons = [
+  "100% non-invasive and painless treatments",
+  "No surgery, no needles, no downtime — resume activities immediately",
+  "Scientifically proven fat burning and skin rejuvenation technology",
+  "FDA and HSA compliant — clinically verified safety",
+  "No hidden fees, no GST, and affordable pricing",
+  "Exclusive 20% discounts for students & seniors",
+];
+
+export default function BlogsPage() {
   return (
     <>
+      <style>{`
+        @keyframes fadeInUp {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .blog-hero { animation: fadeInUp 0.6s ease forwards; }
+        .blog-reasons { animation: fadeInUp 0.6s ease 0.1s both; }
+        .blog-treatments { animation: fadeInUp 0.6s ease 0.2s both; }
+        .treatment-card {
+          background: linear-gradient(135deg, #652D90 0%, #40215C 100%);
+          border-radius: 1.5rem;
+          padding: 2rem 2.5rem;
+          color: #fff;
+          border: 1px solid rgba(255,255,255,0.1);
+          box-shadow: 15px 15px 30px rgba(0,0,0,0.2), -10px -10px 20px rgba(255,255,255,0.08), 0 0 20px rgba(101,45,144,0.25);
+          transition: transform 0.4s cubic-bezier(0.175,0.885,0.32,1.275), box-shadow 0.4s ease;
+        }
+        .treatment-card:hover {
+          transform: translateY(-8px) scale(1.02);
+          box-shadow: 20px 20px 40px rgba(0,0,0,0.3), -15px -15px 30px rgba(255,255,255,0.12), 0 0 30px rgba(101,45,144,0.45);
+        }
+        .reason-item {
+          display: flex;
+          align-items: flex-start;
+          gap: 0.75rem;
+          padding: 1rem 1.25rem;
+          background: #fff;
+          border-radius: 0.75rem;
+          box-shadow: 6px 6px 12px rgba(0,0,0,0.06), -6px -6px 12px rgba(255,255,255,0.9);
+          font-family: 'Quicksand', sans-serif;
+          font-size: 1rem;
+          color: #333;
+          line-height: 1.5;
+        }
+        .reason-dot {
+          flex-shrink: 0;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: linear-gradient(135deg, #652D90, #40215C);
+          margin-top: 5px;
+          box-shadow: 2px 2px 6px rgba(101,45,144,0.4);
+        }
+        .cta-btn {
+          display: inline-block;
+          background: linear-gradient(135deg, #652D90 0%, #40215C 100%);
+          color: #fff;
+          padding: 1rem 2.5rem;
+          border-radius: 100px;
+          font-size: 1.05rem;
+          font-weight: 700;
+          text-decoration: none;
+          font-family: 'Quicksand', sans-serif;
+          box-shadow: 8px 8px 20px rgba(101,45,144,0.35), -4px -4px 10px rgba(255,255,255,0.5);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .cta-btn:hover {
+          transform: translateY(-3px);
+          box-shadow: 12px 12px 28px rgba(101,45,144,0.45), -4px -4px 10px rgba(255,255,255,0.5);
+        }
+      `}</style>
+
       <TodaysArticle />
 
-      <main style={{ display: "flex", justifyContent: "center" }}>
-        <div
-          style={{
-            padding: "20px",
-            fontFamily: "Quicksand, sans-serif",
-            color: "#333",
-            lineHeight: "1.8",
-            width: "80%",
-          }}
-        >
-          <h1 style={{ textAlign: "center", color: "black" }}>
-            Transform Your Beauty with VSkin Technology – The Future of
-            Non-Invasive Slimming & Rejuvenation
+      <main style={{
+        background: "linear-gradient(160deg, #f5f0fa 0%, #f0f0f0 50%, #fdf8ff 100%)",
+        padding: "4rem 1.5rem 6rem",
+        fontFamily: "'Quicksand', sans-serif",
+      }}>
+
+        {/* Hero */}
+        <div className="blog-hero" style={{ maxWidth: "780px", margin: "0 auto 4rem", textAlign: "center" }}>
+          <p style={{ fontSize: "0.85rem", fontWeight: "700", letterSpacing: "3px", textTransform: "uppercase", color: "#652D90", marginBottom: "1rem" }}>
+            Why Choose Us
+          </p>
+          <h1 style={{ fontSize: "clamp(1.8rem, 4vw, 3rem)", fontWeight: "800", color: "#1a1a1a", lineHeight: 1.25, marginBottom: "1.5rem" }}>
+            The Future of Non-Invasive Beauty & Slimming
           </h1>
-
-          <p style={{ fontSize: "18px", textAlign: "justify" }}>
-            In the fast-paced world of beauty and wellness, the demand for
-            **non-invasive slimming treatments** and **skin rejuvenation
-            solutions** has never been higher. At{" "}
-            <strong>VSkin Beauty and Slimming</strong>, we specialize in
-            cutting-edge, painless treatments powered by{" "}
-            <strong>VSkin Technology</strong> – an advanced system designed to
-            **melt fat, tighten skin, and enhance natural beauty** without
-            surgery. Whether you want to achieve a more contoured face, reduce
-            belly fat, or improve your skin's elasticity, our treatments provide
-            **long-lasting, visible results** with zero downtime.
-          </p>
-
-          <h2 style={{ color: "black" }}>
-            Why Choose VSkin Beauty and Slimming?
-          </h2>
-          <ul
-            style={{
-              fontSize: "18px",
-              listStyleType: "square",
-              paddingLeft: "20px",
-            }}
-          >
-            <li>100% non-invasive, pain-free treatments</li>
-            <li>Zero downtime – resume daily activities immediately</li>
-            <li>
-              State-of-the-art VSkin Technology for **fat burning, skin
-              tightening, and collagen restoration**
-            </li>
-            <li>Fully air-conditioned, relaxing environment</li>
-            <li>No hidden fees, no GST, and **affordable pricing**</li>
-            <li>Student and senior discounts available</li>
-          </ul>
-
-          <h2 style={{ color: "black" }}>Our Signature Treatments</h2>
-
-          <h3 style={{ color: "black" }}>
-            VSkin Fat Melt – Melt Away Stubborn Fat
-          </h3>
-          <p style={{ fontSize: "18px", textAlign: "justify" }}>
-            Struggling with stubborn fat despite a healthy diet and exercise?
-            Our **VSkin Fat Melt treatment** targets **localized fat deposits**
-            in areas like the belly, arms, and thighs using **pneumatic
-            gas-driven delivery** technology. This process stimulates **fat
-            breakdown** while tightening the skin, leading to a slimmer, more
-            sculpted body over time.
-          </p>
-          <p
-            style={{
-              fontSize: "18px",
-              fontStyle: "italic",
-              textAlign: "justify",
-            }}
-          >
-            🔹 **How long does it last?** While results can be long-lasting,
-            maintaining a healthy lifestyle is key. A poor diet or inactivity
-            can reduce its effects over time.
-          </p>
-
-          <h3 style={{ color: "black" }}>
-            VSkin Nose Lifting Collagen – Define Your Nose Naturally
-          </h3>
-          <p style={{ fontSize: "18px", textAlign: "justify" }}>
-            Want a more **defined nose without surgery**? Our **VSkin Nose
-            Lifting Collagen treatment** enhances the structure of your nose by
-            **stimulating collagen production and lifting the nasal bridge**.
-            This **non-invasive** procedure provides **a natural-looking
-            enhancement** that lasts **16–18 months**, with peak results seen
-            between **8–12 months**.
-          </p>
-
-          <h3 style={{ color: "black" }}>
-            Korean Aqua Peel Facial – Achieve Glass Skin
-          </h3>
-          <p style={{ fontSize: "18px", textAlign: "justify" }}>
-            Inspired by **Korean skincare**, our **Korean Aqua Peel Facial**
-            deeply hydrates, exfoliates, and revitalizes your skin, leaving it
-            **radiant and dewy**. Using a powerful blend of **hydration
-            boosters, antioxidants, and gentle exfoliants**, this treatment
-            removes dead skin cells while enhancing moisture retention for a
-            **healthy, youthful glow**.
-          </p>
-
-          <h2 style={{ color: "black" }}>Experience the VSkin Difference</h2>
-          <p style={{ fontSize: "18px", textAlign: "justify" }}>
-            At **VSkin Beauty and Slimming**, we believe that beauty should be
-            **effortless and natural**. Our advanced treatments are designed to
-            give you **visible results without pain, downtime, or invasive
-            procedures**. Ready to start your transformation? Book your
-            appointment today!
-          </p>
-
-          <div style={{ textAlign: "center", marginTop: "30px" }}>
-            <a
-              href="/"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                padding: "12px 25px",
-                backgroundColor: "#B22222",
-                color: "#fff",
-                textDecoration: "none",
-                fontSize: "18px",
-                borderRadius: "5px",
-              }}
-            >
-              Book Your Appointment Now
-            </a>
-          </div>
-
-          <div
-            style={{
-              padding: "20px",
-              fontFamily: "'Quicksand', sans-serif",
-              color: "#000",
-              lineHeight: "1.8",
-            }}
-          >
-            {/* Header Section */}
-            <h1
-              style={{
-                textAlign: "center",
-                fontSize: "36px",
-                fontWeight: "bold",
-              }}
-            >
-              The Ultimate Guide to Non-Invasive Slimming & Beauty with VSkin
-              Technology
-            </h1>
-
-            <p
-              style={{
-                fontSize: "18px",
-                textAlign: "center",
-                marginTop: "10px",
-                fontStyle: "italic",
-              }}
-            >
-              Discover how <strong>VSkin Beauty and Slimming</strong> can help
-              you achieve
-              <strong>
-                {" "}
-                a slimmer body, firmer skin, and a youthful glow
-              </strong>{" "}
-              – all without surgery or downtime.
-            </p>
-
-            <div style={{ textAlign: "center", margin: "20px 0" }}>
-              <img
-                src="/topBanner.jpg"
-                alt="VSkin Slimming Treatment"
-                style={{
-                  width: "20%",
-                  maxWidth: "800px",
-                  borderRadius: "10px",
-                  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-                }}
-              />
-            </div>
-
-            {/* Introduction */}
-            <p style={{ fontSize: "18px", textAlign: "justify" }}>
-              In today’s fast-paced world, more and more people are looking for
-              ways to <strong>stay fit, youthful, and confident</strong>–
-              without undergoing surgery. At{" "}
-              <strong>VSkin Beauty and Slimming</strong>, we specialize in{" "}
-              <strong>cutting-edge, non-invasive beauty treatments</strong> that
-              help you achieve your <strong>dream body and skin</strong> with
-              minimal effort.
-            </p>
-
-            <p style={{ fontSize: "18px", textAlign: "justify" }}>
-              Our advanced <strong>VSkin Technology</strong> is a{" "}
-              <strong>pneumatic gas-driven delivery system</strong> that deeply
-              penetrates the
-              <strong>dermis layer</strong>, promoting{" "}
-              <strong>
-                fat burning, collagen production, and skin tightening
-              </strong>
-              . Whether you want to
-              <strong>
-                melt stubborn fat, sculpt your face, enhance your nose, or
-                rejuvenate your skin
-              </strong>
-              , our personalized treatments deliver{" "}
-              <strong>long-lasting, visible results</strong>.
-            </p>
-
-            {/* Why Choose VSkin */}
-            <h2
-              style={{
-                fontSize: "28px",
-                marginTop: "40px",
-                fontWeight: "bold",
-              }}
-            >
-              Why Choose VSkin Beauty and Slimming?
-            </h2>
-            <ul
-              style={{
-                fontSize: "18px",
-                listStyleType: "square",
-                paddingLeft: "20px",
-              }}
-            >
-              <li>
-                100% <strong>non-invasive and painless</strong> treatments
-              </li>
-              <li>
-                <strong>No surgery, no needles, no downtime</strong> – resume
-                activities immediately
-              </li>
-              <li>
-                Scientifically proven{" "}
-                <strong>fat burning and skin rejuvenation</strong> technology
-              </li>
-              <li>
-                Relaxing, fully <strong>air-conditioned spa environment</strong>
-              </li>
-              <li>
-                <strong>No hidden fees, no GST, and affordable pricing</strong>
-              </li>
-              <li>
-                Exclusive <strong>20% discounts for students & seniors</strong>
-              </li>
-            </ul>
-
-            {/* Fat Melting */}
-            <h3
-              style={{
-                fontSize: "24px",
-                marginTop: "40px",
-                fontWeight: "bold",
-              }}
-            >
-              🔥 VSkin Fat Melt – Say Goodbye to Stubborn Fat
-            </h3>
-            <p style={{ fontSize: "18px", textAlign: "justify" }}>
-              Struggling to get rid of{" "}
-              <strong>belly fat, love handles, or arm fat</strong>? Our{" "}
-              <strong>VSkin Fat Melt treatment</strong> uses
-              <strong>high-tech pneumatic gas-driven technology</strong> to{" "}
-              <strong>
-                break down fat cells, stimulate lymphatic drainage, and tighten
-                skin
-              </strong>{" "}
-              – all in a relaxing, pain-free session.
-            </p>
-            <p
-              style={{
-                fontSize: "18px",
-                fontStyle: "italic",
-                textAlign: "justify",
-              }}
-            >
-              🔹 <strong>How long do the results last?</strong> Results can be
-              long-lasting, but maintaining a{" "}
-              <strong>healthy diet and active lifestyle</strong> is essential
-              for optimal results.
-            </p>
-
-            {/* Nose Lifting */}
-            <h3
-              style={{
-                fontSize: "24px",
-                marginTop: "40px",
-                fontWeight: "bold",
-              }}
-            >
-              👃 VSkin Nose Lifting Collagen – Non-Surgical Nose Enhancement
-            </h3>
-            <p style={{ fontSize: "18px", textAlign: "justify" }}>
-              Looking for a{" "}
-              <strong>sharper, more defined nose without surgery</strong>? Our{" "}
-              <strong>VSkin Nose Lifting Collagen treatment</strong>
-              stimulates collagen growth in the{" "}
-              <strong>nasal bridge and tip</strong>, providing a{" "}
-              <strong>natural lift and contour</strong> that lasts{" "}
-              <strong>16–18 months</strong>.
-            </p>
-
-            {/* Call to Action */}
-            <div style={{ textAlign: "center", marginTop: "40px" }}>
-              <a
-                href="/"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  padding: "15px 30px",
-                  backgroundColor: "#B22222",
-                  color: "#fff",
-                  textDecoration: "none",
-                  fontSize: "20px",
-                  borderRadius: "8px",
-                  fontWeight: "bold",
-                }}
-              >
-                Book Your Appointment Now
-              </a>
-            </div>
-          </div>
-
-          <h2 style={{ color: "black", marginTop: "40px" }}>Find Us</h2>
-          <p style={{ fontSize: "18px" }}>
-            📍 **Jurong Branch:** Blk 350 Jurong East Ave 1, #01-1239 (Level 2),
-            Singapore 600350 📍 **Toa Payoh Branch:** Available upon request 📞
-            **Call/WhatsApp:** 9880 7382 🌐 **Website:**{" "}
-            <a
-              href="https://www.vskinbeauty.shop/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              vskin-beauty.vercel.app
-            </a>
-          </p>
-
-          <h2 style={{ color: "black", marginTop: "40px" }}>Stay Connected</h2>
-          <p style={{ fontSize: "18px" }}>
-            Follow us on social media for beauty tips, exclusive promotions, and
-            real customer results!
+          <p style={{ fontSize: "1.1rem", lineHeight: "1.8", color: "#555" }}>
+            At <strong>VSkin Beauty and Slimming</strong>, we specialise in cutting-edge,
+            painless treatments powered by <strong>VSkin Technology</strong> — an advanced
+            pneumatic system designed to melt fat, tighten skin, and enhance natural beauty
+            without surgery, needles, or downtime.
           </p>
         </div>
+
+        {/* Why Choose Us */}
+        <div className="blog-reasons" style={{ maxWidth: "860px", margin: "0 auto 5rem" }}>
+          <h2 style={{ textAlign: "center", fontSize: "1.75rem", fontWeight: "800", color: "#1a1a1a", marginBottom: "2rem" }}>
+            Why VSkin?
+          </h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1rem" }}>
+            {reasons.map((r, i) => (
+              <div key={i} className="reason-item">
+                <div className="reason-dot" />
+                <span>{r}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Treatments */}
+        <div className="blog-treatments" style={{ maxWidth: "1050px", margin: "0 auto 5rem" }}>
+          <h2 style={{ textAlign: "center", fontSize: "1.75rem", fontWeight: "800", color: "#1a1a1a", marginBottom: "2rem" }}>
+            Our Signature Treatments
+          </h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "2rem" }}>
+            {treatments.map((t) => (
+              <div key={t.title} className="treatment-card">
+                <div style={{ fontSize: "2rem", marginBottom: "0.75rem" }}>{t.emoji}</div>
+                <h3 style={{ fontSize: "1.2rem", fontWeight: "700", marginBottom: "0.25rem", letterSpacing: "0.3px" }}>
+                  {t.title}
+                </h3>
+                <p style={{ fontSize: "0.85rem", fontWeight: "600", opacity: 0.7, marginBottom: "1rem", textTransform: "uppercase", letterSpacing: "1px" }}>
+                  {t.subtitle}
+                </p>
+                <p style={{ fontSize: "1rem", lineHeight: "1.7", opacity: 0.92 }}>{t.body}</p>
+                {t.note && (
+                  <p style={{ fontSize: "0.9rem", fontStyle: "italic", opacity: 0.75, marginTop: "1rem", borderTop: "1px solid rgba(255,255,255,0.15)", paddingTop: "1rem" }}>
+                    {t.note}
+                  </p>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* CTA */}
+        <div style={{ textAlign: "center" }}>
+          <p style={{ fontSize: "1.1rem", color: "#555", marginBottom: "1.5rem" }}>
+            Ready to start your transformation?
+          </p>
+          <a href="/contact" className="cta-btn">
+            Book Your Appointment
+          </a>
+        </div>
+
       </main>
     </>
   );
