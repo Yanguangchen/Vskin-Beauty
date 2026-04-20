@@ -7,6 +7,7 @@ import {
   GOOGLE_REVIEWS_EMBED,
   VIDEO_TESTIMONIALS_PLACEHOLDER,
   CLIENT_VOLUME_LINE,
+  BOOKING_TRUST,
 } from "../lib/trustContent";
 
 export default function TrustSection() {
@@ -54,6 +55,15 @@ export default function TrustSection() {
       <div className={styles.embedBox}>
         <h3 className={styles.embedTitle}>{VIDEO_TESTIMONIALS_PLACEHOLDER.headline}</h3>
         <p className={styles.embedBody}>{VIDEO_TESTIMONIALS_PLACEHOLDER.body}</p>
+      </div>
+
+      <div className={styles.embedBox}>
+        <h3 className={styles.embedTitle}>{BOOKING_TRUST.headline}</h3>
+        <ul className={styles.bullets}>
+          {BOOKING_TRUST.bullets.map((b) => (
+            <li key={b}>{b}</li>
+          ))}
+        </ul>
       </div>
 
       <p className={styles.statNote}>{CLIENT_VOLUME_LINE}</p>

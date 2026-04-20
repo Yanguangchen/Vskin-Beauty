@@ -4,6 +4,7 @@ import React, { useMemo, useState } from "react";
 import Link from "next/link";
 import styles from "./conversionPage.module.css";
 import SectionCta from "./sectionCta";
+import DowntimeComparison from "./downtimeComparison";
 import {
   BRAND_SYSTEM,
   CORE_OFFER,
@@ -152,6 +153,8 @@ export default function ConversionPage() {
         <h3 className={styles.sectionTitle} style={{ fontSize: "1.1rem", marginTop: "1.5rem" }}>
           {MECHANISM.vsInjections.headline}
         </h3>
+        <DowntimeComparison />
+
         <table className={styles.compareTable}>
           <thead>
             <tr>

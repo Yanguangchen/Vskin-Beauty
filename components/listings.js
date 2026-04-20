@@ -66,6 +66,9 @@ function TreatmentMini({ service, concernId }) {
       <p className={styles.serviceNote}>{service.note}</p>
 
       <div className={styles.miniCta}>
+        <Link className={styles.miniCtaDetail} href={`/treatments/${service.id}`}>
+          Full treatment page →
+        </Link>
         <a className={styles.miniCtaPrimary} href={wa} target="_blank" rel="noopener noreferrer">
           Check suitability for this treatment
         </a>

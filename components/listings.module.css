@@ -222,6 +222,19 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  align-items: center;
+}
+
+.miniCtaDetail {
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: #5b21b6;
+  text-decoration: none;
+  margin-right: 0.25rem;
+}
+
+.miniCtaDetail:hover {
+  text-decoration: underline;
 }
 
 .miniCtaPrimary,

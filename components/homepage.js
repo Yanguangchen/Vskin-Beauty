@@ -13,41 +13,12 @@ const MediaShowcase = lazy(() => import("./mediaShowcase"));
 const BeautyConcierge = lazy(() => import("./beautyConcierge"));
 const TrustSection = lazy(() => import("./trustSection"));
 const StickyCta = lazy(() => import("./stickyCta"));
+const PricingStrip = lazy(() => import("./pricingStrip"));
+const SectionSkeleton = lazy(() => import("./sectionSkeleton"));
 
 // const Announcement = lazy(() => import("./announcement"));
 
-// Create a simple loading component
-const Loading = () => (
-  <div
-    style={{
-      fontFamily: "Quicksand",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      height: "100vh",
-    }}
-  >
-    <div style={{ textAlign: "center" }}>
-      <div className="spinner" style={{ marginBottom: "10px" }}></div>
-      Loading...
-    </div>
-    <style jsx>{`
-      .spinner {
-        border: 4px solid rgba(0, 0, 0, 0.1);
-        border-left-color: #000;
-        border-radius: 50%;
-        width: 36px;
-        height: 36px;
-        animation: spin 1s linear infinite;
-      }
-      @keyframes spin {
-        to {
-          transform: rotate(360deg);
-        }
-      }
-    `}</style>
-  </div>
-);
+const Skeleton = ({ tall }) => <SectionSkeleton variant={tall ? "tall" : "default"} />;
 
 function Homepage() {
   return (
@@ -56,36 +27,44 @@ function Homepage() {
         <Announcement />
       </Suspense> */}
 
-      <Suspense fallback={<Loading />}>
+      <Suspense fallback={<Skeleton />}>
         <ConversionPage />
       </Suspense>
 
-      <Suspense fallback={<Loading />}>
+      <Suspense fallback={<Skeleton />}>
+        <PricingStrip />
+      </Suspense>
+
+      <Suspense fallback={<Skeleton />}>
         <TrustSection />
       </Suspense>
 
-      <Suspense fallback={<Loading />}>
+      <Suspense fallback={<Skeleton tall />}>
         <SpliceElement />
       </Suspense>
 
-      <Suspense fallback={<Loading />}>
+      <Suspense fallback={<Skeleton />}>
         <BeautyConcierge />
       </Suspense>
 
-      <Suspense fallback={<Loading />}>
+      <Suspense fallback={<Skeleton />}>
         <MediaShowcase />
       </Suspense>
 
-      <Suspense fallback={<Loading />}>
+      <Suspense fallback={<Skeleton />}>
         <Horizontalbanner />
       </Suspense>
 
-      <Suspense fallback={<Loading />}>
+      <Suspense fallback={<Skeleton />}>
         <ReviewCarousell />
       </Suspense>
 
-      <Suspense fallback={<Loading />}>
+      <Suspense fallback={<Skeleton />}>
         <Contactparent />
+      </Suspense>
+
+      <Suspense fallback={null}>
+        <Socials />
       </Suspense>
 
       <Suspense fallback={null}>

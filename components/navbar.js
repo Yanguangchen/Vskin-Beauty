@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import BookingButton from "./bookingButton";
 
 function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,11 +24,11 @@ function NavBar() {
     borderRadius: "100px",
     backdropFilter: "blur(16px)",
     WebkitBackdropFilter: "blur(16px)",
-    background: "rgba(245, 245, 247, 0.72)",
-    border: "1px solid rgba(255, 255, 255, 0.6)",
-    boxShadow: "0 4px 24px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04)",
-    padding: "0.5rem 1.25rem 0.5rem 0.75rem",
-    gap: "1rem",
+    background: "rgba(253, 252, 250, 0.88)",
+    border: "1px solid rgba(232, 228, 239, 0.95)",
+    boxShadow: "0 8px 32px rgba(30, 27, 46, 0.08)",
+    padding: "0.5rem 1rem 0.5rem 0.65rem",
+    gap: "0.65rem",
   };
 
   const logoStyle = {
@@ -38,12 +39,12 @@ function NavBar() {
   };
 
   const linkStyle = {
-    color: "#333",
+    color: "#334155",
     textDecoration: "none",
-    fontSize: "15px",
+    fontSize: "14px",
     fontFamily: "'Quicksand', sans-serif",
     fontWeight: "600",
-    padding: "8px 14px",
+    padding: "8px 12px",
     borderRadius: "100px",
     transition: "all 0.25s ease",
     whiteSpace: "nowrap",
@@ -56,7 +57,7 @@ function NavBar() {
     left: 0,
     right: 0,
     bottom: 0,
-    backgroundColor: "rgba(255, 255, 255, 0.97)",
+    backgroundColor: "rgba(253, 252, 250, 0.98)",
     backdropFilter: "blur(12px)",
     zIndex: 9999,
     flexDirection: "column",
@@ -67,15 +68,15 @@ function NavBar() {
   };
 
   const mobileLinkStyle = {
-    color: "#333",
+    color: "#334155",
     textDecoration: "none",
-    fontSize: "22px",
+    fontSize: "18px",
     fontFamily: "'Quicksand', sans-serif",
     fontWeight: "700",
-    padding: "14px 32px",
+    padding: "14px 28px",
     borderRadius: "100px",
-    border: "1px solid rgba(101,45,144,0.15)",
-    background: "rgba(245,245,247,0.8)",
+    border: "1px solid rgba(101,45,144,0.12)",
+    background: "#fff",
     width: "100%",
     maxWidth: "300px",
     textAlign: "center",
@@ -95,7 +96,7 @@ function NavBar() {
     top: "24px",
     right: "24px",
     fontSize: "36px",
-    color: "#652D90",
+    color: "#5b21b6",
     cursor: "pointer",
     background: "none",
     border: "none",
@@ -112,80 +113,87 @@ function NavBar() {
       padding: "0 1rem",
     }}>
       <div style={pillStyle}>
-        {/* Logo */}
         <Link href="/">
           <img src="topBanner.jpg" alt="VSkin Beauty" style={logoStyle} className="topbanner" />
         </Link>
 
-        {/* Desktop links */}
         {!isMobileView && (
-          <div style={{ display: "flex", alignItems: "center", gap: "0.25rem", flexWrap: "wrap" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "0.1rem", flexWrap: "wrap", flex: 1, justifyContent: "flex-end" }}>
             <Link href="/" style={linkStyle} className="navlinks">Home</Link>
-            <a href="https://www.facebook.com/profile.php?id=61568387910807" style={linkStyle} className="navlinks">Facebook</a>
             <Link href="/listings" style={linkStyle} className="navlinks">Treatments</Link>
-            <Link href="/contact" style={linkStyle} className="navlinks">Contact</Link>
-            <Link href="/Blogs" style={linkStyle} className="navlinks">Why Us</Link>
+            <Link href="/#beauty-concierge" style={linkStyle} className="navlinks">Concerns</Link>
+            <Link href="/#starting-prices" style={linkStyle} className="navlinks">Pricing</Link>
             <Link href="/about" style={linkStyle} className="navlinks">About</Link>
             <Link href="/faq" style={linkStyle} className="navlinks">FAQ</Link>
+            <Link href="/Blogs" style={linkStyle} className="navlinks">Why us</Link>
+            <Link href="/contact" style={linkStyle} className="navlinks">Contact</Link>
+            <a href="https://www.facebook.com/profile.php?id=61568387910807" style={linkStyle} className="navlinks">Facebook</a>
+            <BookingButton style={{ marginLeft: "0.25rem" }}>Book</BookingButton>
             <a
               href="https://cdn.botpress.cloud/webchat/v2.3/shareable.html?configUrl=https://files.bpcontent.cloud/2025/01/15/14/20250115141621-JOO3QMZ7.json"
               style={{
                 ...linkStyle,
-                background: "linear-gradient(135deg, #652D90 0%, #40215C 100%)",
+                background: "linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%)",
                 color: "#fff",
-                padding: "8px 18px",
+                padding: "8px 16px",
               }}
               className="navlinks"
             >
-              Chat with AI
+              AI chat
             </a>
           </div>
         )}
 
-        {/* Hamburger */}
         {isMobileView && (
-          <div
-            onClick={toggleMenu}
-            className="hamburger"
-            style={{
-              fontSize: "26px",
-              color: "#652D90",
-              cursor: "pointer",
-              padding: "6px 10px",
-              lineHeight: 1,
-            }}
-          >
-            &#9776;
+          <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+            <BookingButton style={{ minHeight: 38, fontSize: 13, padding: "0 0.9rem" }}>Book</BookingButton>
+            <div
+              onClick={toggleMenu}
+              className="hamburger"
+              style={{
+                fontSize: "26px",
+                color: "#5b21b6",
+                cursor: "pointer",
+                padding: "6px 10px",
+                lineHeight: 1,
+              }}
+            >
+              &#9776;
+            </div>
           </div>
         )}
       </div>
 
-      {/* Mobile overlay */}
       {isMenuOpen && (
         <div style={menuStyle} className="mobile-menu-overlay">
           <button style={closeButtonStyle} onClick={toggleMenu} aria-label="Close menu">
             &#10005;
           </button>
-          <div style={{ display: "flex", flexDirection: "column", gap: "16px", alignItems: "center", width: "100%", maxWidth: "320px" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "12px", alignItems: "center", width: "100%", maxWidth: "320px" }}>
             <Link href="/" style={getMenuItemStyle(0)} className="mobile-navlink" onClick={toggleMenu}>Home</Link>
-            <a href="https://www.facebook.com/profile.php?id=61571261739335" style={getMenuItemStyle(1)} className="mobile-navlink" onClick={toggleMenu}>Facebook</a>
-            <Link href="/listings" style={getMenuItemStyle(2)} className="mobile-navlink" onClick={toggleMenu}>Treatments</Link>
-            <Link href="/contact" style={getMenuItemStyle(3)} className="mobile-navlink" onClick={toggleMenu}>Contact</Link>
-            <Link href="/Blogs" style={getMenuItemStyle(4)} className="mobile-navlink" onClick={toggleMenu}>Why Us</Link>
-            <Link href="/about" style={getMenuItemStyle(5)} className="mobile-navlink" onClick={toggleMenu}>About</Link>
-            <Link href="/faq" style={getMenuItemStyle(6)} className="mobile-navlink" onClick={toggleMenu}>FAQ</Link>
+            <Link href="/listings" style={getMenuItemStyle(1)} className="mobile-navlink" onClick={toggleMenu}>Treatments</Link>
+            <Link href="/#beauty-concierge" style={getMenuItemStyle(2)} className="mobile-navlink" onClick={toggleMenu}>Concerns quiz</Link>
+            <Link href="/#starting-prices" style={getMenuItemStyle(3)} className="mobile-navlink" onClick={toggleMenu}>Starting prices</Link>
+            <Link href="/about" style={getMenuItemStyle(4)} className="mobile-navlink" onClick={toggleMenu}>About</Link>
+            <Link href="/faq" style={getMenuItemStyle(5)} className="mobile-navlink" onClick={toggleMenu}>FAQ</Link>
+            <Link href="/Blogs" style={getMenuItemStyle(6)} className="mobile-navlink" onClick={toggleMenu}>Why us</Link>
+            <Link href="/contact" style={getMenuItemStyle(7)} className="mobile-navlink" onClick={toggleMenu}>Contact</Link>
+            <a href="https://www.facebook.com/profile.php?id=61571261739335" style={getMenuItemStyle(8)} className="mobile-navlink" onClick={toggleMenu}>Facebook</a>
+            <div onClick={toggleMenu} style={{ width: "100%", maxWidth: "300px" }}>
+              <BookingButton style={{ width: "100%", minHeight: 48 }}>Book appointment</BookingButton>
+            </div>
             <a
               href="https://cdn.botpress.cloud/webchat/v2.3/shareable.html?configUrl=https://files.bpcontent.cloud/2025/01/15/14/20250115141621-JOO3QMZ7.json"
               style={{
-                ...getMenuItemStyle(7),
-                background: "linear-gradient(135deg, #652D90 0%, #40215C 100%)",
+                ...getMenuItemStyle(9),
+                background: "linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%)",
                 color: "#fff",
                 border: "none",
               }}
               className="mobile-navlink"
               onClick={toggleMenu}
             >
-              Chat with AI
+              AI chat
             </a>
           </div>
         </div>

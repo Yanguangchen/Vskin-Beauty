@@ -1,6 +1,7 @@
 export const dynamic = 'force-dynamic';
 
 import "../styles/body.css";
+import "../styles/premium.css";
 import "../styles/grid.css";
 import "../styles/navbar.css";
 import "../styles/footer.css";
@@ -204,6 +205,8 @@ export default function RootLayout({ children }) {
                 <li><a href="/">Home</a></li>
                 <li><a href="https://www.facebook.com/profile.php?id=61568387910807">Facebook Page</a></li>
                 <li><a href="/listings">Treatments by concern</a></li>
+                <li><a href="/#starting-prices">Starting prices</a></li>
+                <li><a href="https://wa.me/6598807382">Book (WhatsApp)</a></li>
                 <li><a href="/contact">Contact</a></li>
                 <li><a href="https://cdn.botpress.cloud/webchat/v2.3/shareable.html?configUrl=https://files.bpcontent.cloud/2025/01/15/14/20250115141621-JOO3QMZ7.json">Chat with our AI</a></li>
                 <li><a href="/Blogs">Why Us</a></li>

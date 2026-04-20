@@ -1,0 +1,105 @@
+.wrap {
+  margin: 1.5rem 0;
+  padding: 1.25rem 1.35rem;
+  border-radius: 1rem;
+  background: linear-gradient(180deg, #ffffff 0%, #faf8ff 100%);
+  border: 1px solid #e8e4ef;
+}
+
+.title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #1e1b4b;
+  margin: 0 0 0.35rem;
+  line-height: 1.3;
+}
+
+.sub {
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: #64748b;
+  margin: 0 0 1rem;
+}
+
+.gridHead {
+  display: none;
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.catTitle {
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #5b21b6;
+  margin: 0 0 0.65rem;
+}
+
+.pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+@media (max-width: 520px) {
+  .pair {
+    grid-template-columns: 1fr;
+  }
+}
+
+.micro {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #64748b;
+  margin: 0 0 0.35rem;
+  line-height: 1.3;
+}
+
+.barTrack {
+  height: 12px;
+  border-radius: 999px;
+  background: #f1f5f9;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  border-radius: 999px;
+}
+
+.typical {
+  background: linear-gradient(90deg, #94a3b8 0%, #64748b 100%);
+}
+
+.vskin {
+  background: linear-gradient(90deg, #a78bfa 0%, #5b21b6 100%);
+}
+
+.footnote {
+  font-size: 0.72rem;
+  line-height: 1.45;
+  color: #94a3b8;
+  margin: 1rem 0 0;
+  font-style: italic;
+}
+
+.colHead,
+.colHeadV {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.colHead {
+  color: #64748b;
+}
+
+.colHeadV {
+  color: #5b21b6;
+}

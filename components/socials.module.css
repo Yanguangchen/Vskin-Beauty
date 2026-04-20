@@ -9,6 +9,11 @@
   margin-bottom: 3%;
   overflow: hidden;
 }
+
+/* Stay above sticky booking bar */
+.whatsapp-widget {
+  z-index: 1003 !important;
+}
 .body-style {
   width: 90%;
   display: flex;

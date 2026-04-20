@@ -1,0 +1,36 @@
+/* Calm, premium layer — complements existing Quicksand UI */
+
+:root {
+  --vskin-ink: #1e1b2e;
+  --vskin-muted: #64748b;
+  --vskin-cream: #fdfcfa;
+  --vskin-lilac: #f5f0ff;
+  --vskin-accent: #5b21b6;
+  --vskin-accent-soft: #7c3aed;
+  --vskin-line: #e8e4ef;
+  --vskin-radius: 1.25rem;
+  --vskin-shadow: 0 20px 50px rgba(30, 27, 46, 0.06);
+}
+
+body {
+  background: linear-gradient(165deg, #fdfcfa 0%, #f3f0f9 45%, #faf8ff 100%) !important;
+  color: var(--vskin-ink);
+}
+
+/* Softer page chrome */
+main {
+  color: inherit;
+}
+
+/* Hero / conversion wrap lives in module CSS — global polish for titles */
+h1,
+h2 {
+  letter-spacing: -0.02em;
+}
+
+/* Focus rings for premium accessibility */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--vskin-accent-soft);
+  outline-offset: 3px;
+}
