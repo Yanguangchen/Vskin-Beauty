@@ -4,11 +4,10 @@ import React, { Suspense, lazy } from "react";
 
 // Lazy load components
 const SpliceElement = lazy(() => import("./splice"));
-const Listings = lazy(() => import("./listings"));
 const Contactparent = lazy(() => import("./contactParent"));
 const Socials = lazy(() => import("./socials"));
-const AboutSection = lazy(() => import("./about"));
 const Horizontalbanner = lazy(() => import("./horizontalbanner"));
+const ConversionPage = lazy(() => import("./conversionPage"));
 const ReviewCarousell = lazy(() => import("./reviewCarousell"));
 const MediaShowcase = lazy(() => import("./mediaShowcase"));
 const BeautyConcierge = lazy(() => import("./beautyConcierge"));
@@ -56,11 +55,11 @@ function Homepage() {
       </Suspense> */}
 
       <Suspense fallback={<Loading />}>
-        <SpliceElement />
+        <ConversionPage />
       </Suspense>
 
       <Suspense fallback={<Loading />}>
-        <AboutSection />
+        <SpliceElement />
       </Suspense>
 
       <Suspense fallback={<Loading />}>
@@ -73,10 +72,6 @@ function Homepage() {
 
       <Suspense fallback={<Loading />}>
         <Horizontalbanner />
-      </Suspense>
-
-      <Suspense fallback={<Loading />}>
-        <Listings />
       </Suspense>
 
       <Suspense fallback={<Loading />}>

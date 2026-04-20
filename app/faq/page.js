@@ -4,6 +4,26 @@ import React, { useState } from "react";
 
 const faqs = [
   {
+    question: "Will it work for me?",
+    answer:
+      "Suitability depends on your goals, skin state, and health history. During your consultation we explain what needle-free protocols can realistically do—and what they cannot. If we are not the right fit, we will say so.",
+  },
+  {
+    question: "Is this better than Botox or fillers?",
+    answer:
+      "Different tools for different jobs. Injections can be excellent for specific wrinkles or volume loss. Our focus is needle-free facial sculpting and skin support with VJet—ideal if you want refinement without going straight to syringes, or if you want to complement (not replace) other treatments after professional advice.",
+  },
+  {
+    question: "How long do results last?",
+    answer:
+      "It depends on the programme (fat melt vs collagen support vs tightening), your lifestyle, and maintenance. We give honest ranges during your consultation—there is no honest one-number answer for every face.",
+  },
+  {
+    question: "Why should I trust a smaller clinic over a big chain?",
+    answer:
+      "We compete on clarity: compliant technology, transparent first-visit pricing, and therapists who document what to expect between sessions. Read our client reviews and ask every pricing question twice—we encourage it.",
+  },
+  {
     question: "Is the VJet treatment painful?",
     answer:
       "No. The VJet system is entirely needle-free and non-invasive. Clients typically describe the sensation as a light pressure or cool mist — similar to a gentle spray on the skin. There is no pain, no puncturing, and no discomfort associated with needles.",
