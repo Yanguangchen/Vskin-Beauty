@@ -122,7 +122,7 @@ function NavBar() {
           <div style={{ display: "flex", alignItems: "center", gap: "0.25rem", flexWrap: "wrap" }}>
             <Link href="/" style={linkStyle} className="navlinks">Home</Link>
             <a href="https://www.facebook.com/profile.php?id=61568387910807" style={linkStyle} className="navlinks">Facebook</a>
-            <Link href="/listings" style={linkStyle} className="navlinks">Price List</Link>
+            <Link href="/listings" style={linkStyle} className="navlinks">Treatments</Link>
             <Link href="/contact" style={linkStyle} className="navlinks">Contact</Link>
             <Link href="/Blogs" style={linkStyle} className="navlinks">Why Us</Link>
             <Link href="/about" style={linkStyle} className="navlinks">About</Link>
@@ -169,7 +169,7 @@ function NavBar() {
           <div style={{ display: "flex", flexDirection: "column", gap: "16px", alignItems: "center", width: "100%", maxWidth: "320px" }}>
             <Link href="/" style={getMenuItemStyle(0)} className="mobile-navlink" onClick={toggleMenu}>Home</Link>
             <a href="https://www.facebook.com/profile.php?id=61571261739335" style={getMenuItemStyle(1)} className="mobile-navlink" onClick={toggleMenu}>Facebook</a>
-            <Link href="/listings" style={getMenuItemStyle(2)} className="mobile-navlink" onClick={toggleMenu}>Price List</Link>
+            <Link href="/listings" style={getMenuItemStyle(2)} className="mobile-navlink" onClick={toggleMenu}>Treatments</Link>
             <Link href="/contact" style={getMenuItemStyle(3)} className="mobile-navlink" onClick={toggleMenu}>Contact</Link>
             <Link href="/Blogs" style={getMenuItemStyle(4)} className="mobile-navlink" onClick={toggleMenu}>Why Us</Link>
             <Link href="/about" style={getMenuItemStyle(5)} className="mobile-navlink" onClick={toggleMenu}>About</Link>

@@ -162,13 +162,12 @@ function HorizontalBanner() {
                   animation: isCard1Hovered ? 'shimmerText 2s ease-in-out infinite' : 'none',
                   transition: 'all 0.3s ease',
                 }}>
-                  Non Invasive & Safe Technology
+                  Comfort-first, clinic-grade delivery
                 </strong>
-                <br></br>The VSkin system is a pneumatic, gas-driven delivery
-                mechanism that injects beauty serums directly into the skins
-                dermis layer without using needles. This non-invasive approach
-                reduces the risks commonly associated with needle-based
-                treatments...
+                <br></br>
+                Serums are propelled under controlled pressure—no needles—so many
+                clients return to work or social plans the same day while still
+                targeting the dermis where change shows up over time.
               </p>
             </div>
           </div>
@@ -236,11 +235,12 @@ function HorizontalBanner() {
                   animation: isCard2Hovered ? 'shimmerText 2s ease-in-out infinite' : 'none',
                   transition: 'all 0.3s ease',
                 }}>
-                  FDA and HSA compliant
+                  Standards you can look up
                 </strong>
-                <br></br>The V-Skin technology offers unmatched comfort and
-                convenience to customers by providing a non-invasive and
-                needle-free treatment and is <strong>FDA and HSA compliant.</strong>
+                <br></br>
+                Our VJet platform is positioned for clients who want{" "}
+                <strong>FDA and HSA compliant</strong> technology—not mystery gadgets—
+                paired with clear explanations before you start.
               </p>
             </div>
 

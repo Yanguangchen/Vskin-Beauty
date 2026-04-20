@@ -21,7 +21,7 @@ function Socials() {
           <WhatsAppWidget
             phoneNumber="98807382"
             companyName="VSkin Beauty & Slimming"
-            message="Ready to change your whole look? Contact us now!"
+            message="Hi VSkin, I’d like to book or ask about needle-free treatments."
           />
         </div>
       </div>

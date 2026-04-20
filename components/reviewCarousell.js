@@ -239,14 +239,14 @@ var GoogleReviews = function () {
     null,
     React.createElement(
       "h1",
-      { style: { textAlign: "center" } },
-      "What our clients say!"
+      { style: { textAlign: "center", fontSize: "clamp(1.5rem, 4vw, 2rem)", fontWeight: "700", color: "#111827", marginBottom: "0.5rem" } },
+      "What our clients say"
     ),
     React.createElement(GoogleReviewsCarousel, { reviews: sampleReviews }),
     React.createElement(
       "p",
-      { style: { textAlign: "center", marginBottom: "10%" } },
-      "Powered by Web Wizards Widgets"
+      { style: { textAlign: "center", marginBottom: "10%", fontSize: "0.85rem", color: "#9ca3af" } },
+      "Reviews for transparency; experiences vary."
     )
   );
 };
