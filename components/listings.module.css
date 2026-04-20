@@ -87,42 +87,166 @@
 .concernTagline {
   font-size: 1rem;
   color: #6b7280;
-  margin: 0 0 1.5rem;
+  margin: 0 0 0.75rem;
   line-height: 1.5;
+}
+
+.emotionalHook {
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: #334155;
+  font-weight: 600;
+  margin: 0 0 1.5rem;
+  padding: 1rem 1.15rem;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, #faf5ff 0%, #fff 100%);
+  border: 1px solid rgba(101, 45, 144, 0.12);
 }
 
 .serviceList {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.75rem;
 }
 
-.serviceCard {
+.miniLanding {
+  scroll-margin-top: 6.5rem;
   background: #fff;
   border: 1px solid #e5e7eb;
-  border-radius: 1rem;
-  padding: 1.15rem 1.25rem;
+  border-radius: 1.25rem;
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.05);
+}
+
+.miniHeader {
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f1f5f9;
 }
 
 .serviceName {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: #111827;
-  margin: 0 0 0.35rem;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 0.5rem;
 }
 
-.serviceBenefit {
+.hookLine {
+  font-size: 1rem;
+  line-height: 1.55;
+  color: #475569;
+  margin: 0;
+}
+
+.miniBlock {
+  margin-bottom: 1.15rem;
+}
+
+.miniLabel {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #652d90;
+  margin: 0 0 0.5rem;
+}
+
+.miniList {
+  margin: 0;
+  padding-left: 1.15rem;
+  color: #334155;
   font-size: 0.95rem;
   line-height: 1.55;
-  color: #4b5563;
+}
+
+.miniBody {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #475569;
   margin: 0 0 0.5rem;
+}
+
+.sessionNote {
+  font-size: 0.85rem;
+  color: #64748b;
+  font-style: italic;
+  margin: 0;
+}
+
+.tagRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  background: #f1f5f9;
+  color: #334155;
+}
+
+.timeline {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: #475569;
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.timeline li {
+  margin-bottom: 0.35rem;
+}
+
+.baPlaceholder {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #64748b;
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: 0.75rem;
+  padding: 0.85rem 1rem;
+  margin: 1rem 0;
 }
 
 .serviceNote {
   font-size: 0.82rem;
   color: #9ca3af;
-  margin: 0;
+  margin: 0 0 1rem;
   font-style: italic;
+}
+
+.miniCta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.miniCtaPrimary,
+.miniCtaSecondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 1.1rem;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+  font-family: inherit;
+}
+
+.miniCtaPrimary {
+  background: linear-gradient(135deg, #652d90 0%, #40215c 100%);
+  color: #fff;
+}
+
+.miniCtaSecondary {
+  background: #fff;
+  color: #40215c;
+  border: 2px solid rgba(101, 45, 144, 0.3);
 }
 
 .ctaBand {

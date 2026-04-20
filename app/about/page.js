@@ -200,6 +200,134 @@ export default function AboutPage() {
 
         <div
           style={{
+            maxWidth: "800px",
+            margin: "0 auto 3rem",
+            padding: "2rem 1.75rem",
+            borderRadius: "1.25rem",
+            background: "#fff",
+            border: "1px solid rgba(101,45,144,0.12)",
+            boxShadow: "0 12px 40px rgba(15,23,42,0.06)",
+            textAlign: "left",
+          }}
+        >
+          <h2
+            style={{
+              fontSize: "1.35rem",
+              fontWeight: "800",
+              color: "#1a1a1a",
+              marginTop: 0,
+              marginBottom: "0.75rem",
+            }}
+          >
+            Why this clinic exists
+          </h2>
+          <p
+            style={{
+              fontSize: "1rem",
+              lineHeight: "1.8",
+              color: "#444",
+              margin: "0 0 1rem",
+            }}
+          >
+            This business exists because too many beauty journeys start with fear:
+            fear of needles, fear of hard-selling, fear of looking &ldquo;not like
+            yourself.&rdquo; We built around non-invasive, needle-free protocols so
+            you can chase sharper contours and fresher skin without defaulting to
+            surgery—or pressure to buy ten things you never asked for.
+          </p>
+          <p
+            style={{
+              fontSize: "1rem",
+              lineHeight: "1.8",
+              color: "#444",
+              margin: 0,
+            }}
+          >
+            <strong>Replace this block with your real founder story</strong> (name,
+            years in aesthetics, why Jurong, what you refuse to compromise on).
+            Specific beats slick every time—and it is what stops &ldquo;random
+            website&rdquo; skepticism.
+          </p>
+        </div>
+
+        <div
+          style={{
+            maxWidth: "800px",
+            margin: "0 auto 3rem",
+            padding: "2rem 1.75rem",
+            borderRadius: "1.25rem",
+            background: "linear-gradient(135deg, #652D90 0%, #40215C 100%)",
+            color: "#fff",
+            textAlign: "center",
+            boxShadow: "0 16px 40px rgba(101,45,144,0.25)",
+          }}
+        >
+          <h2
+            style={{
+              fontSize: "1.2rem",
+              fontWeight: "800",
+              marginTop: 0,
+              marginBottom: "0.75rem",
+            }}
+          >
+            Mission
+          </h2>
+          <p style={{ fontSize: "1.05rem", lineHeight: "1.75", margin: 0, opacity: 0.95 }}>
+            Deliver honest, needle-free aesthetic outcomes with compliant
+            technology—where clarity comes before commission, and where your face
+            keeps its character.
+          </p>
+        </div>
+
+        <div
+          style={{
+            maxWidth: "800px",
+            margin: "0 auto 3rem",
+            padding: "2rem 1.75rem",
+            borderRadius: "1.25rem",
+            background: "#fff",
+            border: "1px solid rgba(101,45,144,0.12)",
+            textAlign: "left",
+          }}
+        >
+          <h2
+            style={{
+              fontSize: "1.2rem",
+              fontWeight: "800",
+              color: "#1a1a1a",
+              marginTop: 0,
+              marginBottom: "0.75rem",
+            }}
+          >
+            Behind the scenes (add proof as you have it)
+          </h2>
+          <ul
+            style={{
+              margin: 0,
+              paddingLeft: "1.2rem",
+              color: "#444",
+              lineHeight: "1.75",
+              fontSize: "1rem",
+            }}
+          >
+            <li>
+              <strong>Technology sourcing:</strong> VJet / pneumatic delivery vetted
+              for FDA &amp; HSA compliance—document what you display on-site.
+            </li>
+            <li>
+              <strong>Training:</strong> list certificates, brand trainings, and
+              years of hands-on experience per lead therapist (only verifiable
+              facts).
+            </li>
+            <li>
+              <strong>Real media:</strong> clinic interior, treatment room, team
+              headshots—replace template feel with Jurong-specific proof.
+            </li>
+          </ul>
+        </div>
+
+        <div
+          style={{
             maxWidth: "720px",
             margin: "0 auto 3.5rem",
             padding: "2rem 1.75rem",
@@ -312,10 +440,13 @@ export default function AboutPage() {
           }}
         >
           <p style={{ fontSize: "1.1rem", color: "#555", marginBottom: "1.5rem" }}>
-            Experience the difference at our Jurong East outlet.
+            Experience the difference at our Jurong East outlet—or message us first
+            with your questions.
           </p>
           <a
-            href="/contact"
+            href="https://wa.me/6598807382?text=Hi%20VSkin%2C%20I%20read%20your%20About%20page%20and%20want%20to%20book%20a%20face%20analysis%20%2F%20consultation."
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
               display: "inline-block",
               background: "linear-gradient(135deg, #652D90 0%, #40215C 100%)",
@@ -330,7 +461,7 @@ export default function AboutPage() {
               transition: "transform 0.3s ease, box-shadow 0.3s ease",
             }}
           >
-            Book a Free Consultation
+            WhatsApp: Book face analysis
           </a>
         </div>
       </main>

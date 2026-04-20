@@ -11,6 +11,8 @@ const ConversionPage = lazy(() => import("./conversionPage"));
 const ReviewCarousell = lazy(() => import("./reviewCarousell"));
 const MediaShowcase = lazy(() => import("./mediaShowcase"));
 const BeautyConcierge = lazy(() => import("./beautyConcierge"));
+const TrustSection = lazy(() => import("./trustSection"));
+const StickyCta = lazy(() => import("./stickyCta"));
 
 // const Announcement = lazy(() => import("./announcement"));
 
@@ -49,13 +51,17 @@ const Loading = () => (
 
 function Homepage() {
   return (
-    <div>
+    <div style={{ paddingBottom: "5.75rem" }}>
       {/* <Suspense fallback={<Loading />}>
         <Announcement />
       </Suspense> */}
 
       <Suspense fallback={<Loading />}>
         <ConversionPage />
+      </Suspense>
+
+      <Suspense fallback={<Loading />}>
+        <TrustSection />
       </Suspense>
 
       <Suspense fallback={<Loading />}>
@@ -80,6 +86,10 @@ function Homepage() {
 
       <Suspense fallback={<Loading />}>
         <Contactparent />
+      </Suspense>
+
+      <Suspense fallback={null}>
+        <StickyCta />
       </Suspense>
     </div>
   );

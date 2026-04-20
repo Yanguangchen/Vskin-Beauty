@@ -1,0 +1,126 @@
+.section {
+  margin: 2rem 0;
+  padding: clamp(1.5rem, 4vw, 2rem);
+  border-radius: 1.25rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.title {
+  font-size: clamp(1.2rem, 3vw, 1.45rem);
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 0.75rem;
+}
+
+.lead {
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: #475569;
+  margin: 0 0 1rem;
+}
+
+.bullets {
+  margin: 0 0 1.5rem;
+  padding-left: 1.2rem;
+  color: #334155;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 1.1rem;
+}
+
+.cardRole {
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #652d90;
+  margin: 0 0 0.5rem;
+}
+
+.cardCopy {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: #64748b;
+  margin: 0;
+}
+
+.mediaRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.mediaBox {
+  border-radius: 1rem;
+  border: 2px dashed #cbd5e1;
+  min-height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+  color: #64748b;
+  background: #fff;
+}
+
+.embedBox {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.embedTitle {
+  font-size: 1rem;
+  font-weight: 800;
+  margin: 0 0 0.5rem;
+  color: #0f172a;
+}
+
+.embedBody {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.55;
+  margin: 0 0 1rem;
+}
+
+.embedLink {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  padding: 0 1.2rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #652d90 0%, #40215c 100%);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.statNote {
+  font-size: 0.88rem;
+  color: #64748b;
+  font-style: italic;
+  margin: 0;
+  padding: 0.75rem 1rem;
+  background: #fff7ed;
+  border-radius: 0.75rem;
+  border: 1px solid #fed7aa;
+}

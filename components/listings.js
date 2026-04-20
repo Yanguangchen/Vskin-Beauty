@@ -3,17 +3,90 @@ import Link from "next/link";
 import styles from "./listings.module.css";
 import { CONCERNS } from "../lib/treatmentsData";
 
+const WA = "https://wa.me/6598807382";
+
+function encode(text) {
+  return encodeURIComponent(text);
+}
+
+function TreatmentMini({ service, concernId }) {
+  const wa = `${WA}?text=${encode(
+    `Hi VSkin, I'm interested in "${service.name}" (${concernId}). Please advise suitability and slots.`
+  )}`;
+  return (
+    <article id={`treatment-${service.id}`} className={styles.miniLanding}>
+      <div className={styles.miniHeader}>
+        <h3 className={styles.serviceName}>{service.name}</h3>
+        <p className={styles.hookLine}>{service.benefit}</p>
+      </div>
+
+      <div className={styles.miniBlock}>
+        <h4 className={styles.miniLabel}>This is for you if…</h4>
+        <ul className={styles.miniList}>
+          {service.forYouIf.map((x) => (
+            <li key={x}>{x}</li>
+          ))}
+        </ul>
+      </div>
+
+      <div className={styles.miniBlock}>
+        <h4 className={styles.miniLabel}>What you may notice (realistic timeline)</h4>
+        <p className={styles.miniBody}>{service.afterSessions}</p>
+        <p className={styles.sessionNote}>{service.sessionNote}</p>
+      </div>
+
+      <div className={styles.miniBlock}>
+        <h4 className={styles.miniLabel}>Best for</h4>
+        <div className={styles.tagRow}>
+          {service.bestFor.map((t) => (
+            <span key={t} className={styles.tag}>
+              {t}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {service.sessionExpectations?.length ? (
+        <div className={styles.miniBlock}>
+          <h4 className={styles.miniLabel}>Session expectations</h4>
+          <ol className={styles.timeline}>
+            {service.sessionExpectations.map((row) => (
+              <li key={row.phase}>
+                <strong>{row.phase}:</strong> {row.detail}
+              </li>
+            ))}
+          </ol>
+        </div>
+      ) : null}
+
+      <div className={styles.baPlaceholder} role="note">
+        <strong>Before / after:</strong> {service.baPlaceholder}
+      </div>
+
+      <p className={styles.serviceNote}>{service.note}</p>
+
+      <div className={styles.miniCta}>
+        <a className={styles.miniCtaPrimary} href={wa} target="_blank" rel="noopener noreferrer">
+          Check suitability for this treatment
+        </a>
+        <a className={styles.miniCtaSecondary} href="/#beauty-concierge">
+          Run face-type quiz first
+        </a>
+      </div>
+    </article>
+  );
+}
+
 function Listings() {
   return (
     <div className={styles.page}>
       <header className={styles.intro}>
-        <p className={styles.kicker}>Treatments by concern</p>
-        <h1 className={styles.title}>Choose what you want to feel—not jargon</h1>
+        <p className={styles.kicker}>Treatments — mini landing pages</p>
+        <h1 className={styles.title}>Pick your problem. We’ll show the path—not a menu of noise.</h1>
         <p className={styles.lead}>
-          VSkin Beauty & Slimming is your Jurong-based beauty concierge: we
-          match goals to needle-free, non-invasive protocols and explain pricing
-          upfront. Use the quick links or scroll for the concern that sounds like
-          you.
+          Each block below is written like a sales page: who it is for, what to
+          expect over time, and how sessions progress. Same needle-free VJet
+          standard—different goals. When you are ready, WhatsApp us with one tap.
         </p>
       </header>
 
@@ -37,13 +110,12 @@ function Listings() {
             {concern.title}
           </h2>
           <p className={styles.concernTagline}>{concern.tagline}</p>
+          {concern.emotionalHook ? (
+            <p className={styles.emotionalHook}>{concern.emotionalHook}</p>
+          ) : null}
           <div className={styles.serviceList}>
             {concern.services.map((s) => (
-              <article key={s.name} className={styles.serviceCard}>
-                <h3 className={styles.serviceName}>{s.name}</h3>
-                <p className={styles.serviceBenefit}>{s.benefit}</p>
-                <p className={styles.serviceNote}>{s.note}</p>
-              </article>
+              <TreatmentMini key={s.id} service={s} concernId={concern.id} />
             ))}
           </div>
         </section>
@@ -51,20 +123,22 @@ function Listings() {
 
       <div className={styles.ctaBand}>
         <p>
-          Ready for a human recommendation? WhatsApp us or take the quick quiz
-          on the homepage.
+          Still deciding? Complete the face-type quiz on the homepage—we’ll
+          pre-fill WhatsApp with your goals.
         </p>
         <div className={styles.ctaRow}>
           <a
             className={styles.ctaPrimary}
-            href="https://wa.me/6598807382?text=Hi%20VSkin%2C%20I%27d%20like%20to%20book%20or%20ask%20about%20treatments."
+            href={`${WA}?text=${encode(
+              "Hi VSkin, I read your treatments page and want a face analysis to know what fits me."
+            )}`}
             target="_blank"
             rel="noopener noreferrer"
           >
-            WhatsApp 9880 7382
+            Get your face analysis now
           </a>
           <Link className={styles.ctaSecondary} href="/#beauty-concierge">
-            Back to Beauty Concierge
+            Start face-type quiz
           </Link>
         </div>
       </div>

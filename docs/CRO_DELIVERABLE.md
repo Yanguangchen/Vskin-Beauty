@@ -108,6 +108,17 @@ See `TRUST_CHECKLIST` in `lib/conversionCopy.js` (before/afters, live Google wid
 
 ---
 
+## Phase 2 — Authority, listings mini landings, quiz funnel
+
+- **`lib/trustContent.js`** + **`components/trustSection.js`**: “Why you can trust us,” clinic/team placeholders, Google reviews link-out, video testimonial placeholder, honest client-volume line (replace when you have a verified count).
+- **`components/stickyCta.js`**: Sticky WhatsApp + quiz entry.
+- **`lib/quizFunnel.js`** + **`components/beautyConcierge.js`**: Face-shape type → priority areas → budget → optional name/phone → **WhatsApp message** with all answers (no backend).
+- **`lib/treatmentsData.js`** + **`components/listings.js`**: Per-treatment **mini landing** blocks (for you if / timeline / best for / session expectations / before-after placeholder / CTAs).
+- **`conversionPage.js`** + **`sectionCta.js`**: PAS-style momentum, **V-Sculpt Protocol™** steps, stronger CTAs per section, **First-Time Face Sculpting Experience™** offer with value stack **without fake “worth $X” totals**.
+- **`app/about/page.js`**: Founder / mission / credibility scaffolding (replace template founder paragraph with real story).
+
+---
+
 ## Compliance note
 
 We did **not** add fabricated years-in-business, fake session counts, or unverified before/afters. Add only what you can **prove** and **document**.
