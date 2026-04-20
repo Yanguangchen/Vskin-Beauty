@@ -13,32 +13,32 @@ const badges = [
 
 const pillars = [
   {
-    title: "No Needles. Ever.",
+    title: "Needle-free depth, less anxiety",
     description:
       "The VJet system is a pneumatic, gas-driven delivery mechanism that injects beauty serums directly into the skin's dermis layer — without a single needle. No punctures, no wounds, no risk of infection from sharp instruments.",
   },
   {
-    title: "Non-Invasive Technology",
+    title: "Walk in, walk out—no surgery",
     description:
       "Unlike surgical facelifts or invasive procedures, VSkin treatments work entirely on the surface and sub-surface of the skin. There is no cutting, no anaesthesia, and no recovery room. You walk in and walk out feeling refreshed.",
   },
   {
-    title: "Zero Surgical Risk",
+    title: "Safety you can feel good about",
     description:
       "Surgical procedures carry inherent risks — complications, scarring, prolonged healing, and anaesthesia reactions. With VJet technology, none of these apply. Our treatments are designed to be as safe as they are effective.",
   },
   {
-    title: "FDA & HSA Approved",
+    title: "Standards you can look up",
     description:
       "VSkin's technology meets the rigorous standards set by both the US Food & Drug Administration (FDA) and Singapore's Health Sciences Authority (HSA). These approvals are not cosmetic — they are official certifications of safety and efficacy.",
   },
   {
-    title: "Scientifically Backed Results",
+    title: "Goals you can see in the mirror",
     description:
       "Our treatments deliver measurable outcomes: fat reduction, skin tightening, wrinkle smoothing, and serum absorption — all without the risks associated with needles or surgery. Results you can see, delivered safely.",
   },
   {
-    title: "Comfortable for All Skin Types",
+    title: "Sensitive skin is not an afterthought",
     description:
       "VJet's gas-driven mechanism is gentle enough for sensitive skin yet powerful enough to deliver serums deep into the dermis. Suitable for all skin tones and types, with no contraindications from needles or surgical materials.",
   },
@@ -180,8 +180,8 @@ export default function AboutPage() {
               marginBottom: "1.5rem",
             }}
           >
-            The Future of Beauty is{" "}
-            <span style={{ color: "#652D90" }}>Safe, Proven & Needle-Free</span>
+            Needle-free beauty that still{" "}
+            <span style={{ color: "#652D90" }}>feels premium</span>
           </h1>
           <p
             style={{
@@ -195,6 +195,45 @@ export default function AboutPage() {
             VSkin Beauty & Slimming uses VJet technology — an officially approved,
             pneumatic serum delivery system that achieves premium aesthetic results
             with absolutely no needles, no surgery, and no downtime.
+          </p>
+        </div>
+
+        <div
+          style={{
+            maxWidth: "720px",
+            margin: "0 auto 3.5rem",
+            padding: "2rem 1.75rem",
+            borderRadius: "1.25rem",
+            background: "rgba(255,255,255,0.85)",
+            border: "1px solid rgba(101,45,144,0.12)",
+            boxShadow: "0 12px 40px rgba(15,23,42,0.06)",
+            textAlign: "left",
+          }}
+        >
+          <h2
+            style={{
+              fontSize: "1.25rem",
+              fontWeight: "800",
+              color: "#1a1a1a",
+              marginTop: 0,
+              marginBottom: "0.75rem",
+            }}
+          >
+            Why we focus on these treatments
+          </h2>
+          <p
+            style={{
+              fontSize: "1rem",
+              lineHeight: "1.75",
+              color: "#444",
+              margin: 0,
+            }}
+          >
+            We are not trying to stock every gadget on the market. We built VSkin
+            around needle-free, non-invasive protocols that answer real
+            Singaporean concerns—contour, firmness, reactive skin, and busy
+            schedules—so you get curated expertise instead of a generic menu.
+            When something does not fit your goals or health profile, we say so.
           </p>
         </div>
 
