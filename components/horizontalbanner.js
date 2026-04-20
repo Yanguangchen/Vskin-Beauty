@@ -162,12 +162,13 @@ function HorizontalBanner() {
                   animation: isCard1Hovered ? 'shimmerText 2s ease-in-out infinite' : 'none',
                   transition: 'all 0.3s ease',
                 }}>
-                  Comfort-first care, same depth of results
+                  Non Invasive & Safe Technology
                 </strong>
-                <br></br>
-                Serums reach where they matter—without needles—so you can
-                skip puncture risk and long recovery while still targeting
-                texture, contour, and confidence.
+                <br></br>The VSkin system is a pneumatic, gas-driven delivery
+                mechanism that injects beauty serums directly into the skins
+                dermis layer without using needles. This non-invasive approach
+                reduces the risks commonly associated with needle-based
+                treatments...
               </p>
             </div>
           </div>
@@ -235,12 +236,11 @@ function HorizontalBanner() {
                   animation: isCard2Hovered ? 'shimmerText 2s ease-in-out infinite' : 'none',
                   transition: 'all 0.3s ease',
                 }}>
-                  Trust you can verify
+                  FDA and HSA compliant
                 </strong>
-                <br></br>
-                Technology that meets rigorous safety expectations—so you know
-                you are not gambling on an unregulated gadget.{" "}
-                <strong>FDA and HSA compliant.</strong>
+                <br></br>The V-Skin technology offers unmatched comfort and
+                convenience to customers by providing a non-invasive and
+                needle-free treatment and is <strong>FDA and HSA compliant.</strong>
               </p>
             </div>
 

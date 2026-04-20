@@ -2,8 +2,7 @@ import Listings from "../../components/listings";
 
 export const metadata = {
   title: "Vskin Beauty & Slimming - Services",
-  description:
-    "Browse treatments by concern—slimming, firming, sensitive skin, and first visits. Then book by WhatsApp or consultation.",
+  description: "Explore our wide range of beauty services and offerings.",
 };
 
 export default function ListingsPage() {

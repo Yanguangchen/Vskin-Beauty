@@ -13,32 +13,32 @@ const badges = [
 
 const pillars = [
   {
-    title: "Needle-free depth, less anxiety",
+    title: "No Needles. Ever.",
     description:
       "The VJet system is a pneumatic, gas-driven delivery mechanism that injects beauty serums directly into the skin's dermis layer — without a single needle. No punctures, no wounds, no risk of infection from sharp instruments.",
   },
   {
-    title: "Walk in, walk out—no surgery",
+    title: "Non-Invasive Technology",
     description:
       "Unlike surgical facelifts or invasive procedures, VSkin treatments work entirely on the surface and sub-surface of the skin. There is no cutting, no anaesthesia, and no recovery room. You walk in and walk out feeling refreshed.",
   },
   {
-    title: "Safety you can feel good about",
+    title: "Zero Surgical Risk",
     description:
       "Surgical procedures carry inherent risks — complications, scarring, prolonged healing, and anaesthesia reactions. With VJet technology, none of these apply. Our treatments are designed to be as safe as they are effective.",
   },
   {
-    title: "Standards you can look up",
+    title: "FDA & HSA Approved",
     description:
       "VSkin's technology meets the rigorous standards set by both the US Food & Drug Administration (FDA) and Singapore's Health Sciences Authority (HSA). These approvals are not cosmetic — they are official certifications of safety and efficacy.",
   },
   {
-    title: "Goals you can see in the mirror",
+    title: "Scientifically Backed Results",
     description:
       "Our treatments deliver measurable outcomes: fat reduction, skin tightening, wrinkle smoothing, and serum absorption — all without the risks associated with needles or surgery. Results you can see, delivered safely.",
   },
   {
-    title: "Sensitive skin is not an afterthought",
+    title: "Comfortable for All Skin Types",
     description:
       "VJet's gas-driven mechanism is gentle enough for sensitive skin yet powerful enough to deliver serums deep into the dermis. Suitable for all skin tones and types, with no contraindications from needles or surgical materials.",
   },
@@ -180,8 +180,8 @@ export default function AboutPage() {
               marginBottom: "1.5rem",
             }}
           >
-            Needle-free beauty that still{" "}
-            <span style={{ color: "#652D90" }}>feels premium</span>
+            The Future of Beauty is{" "}
+            <span style={{ color: "#652D90" }}>Safe, Proven & Needle-Free</span>
           </h1>
           <p
             style={{
@@ -195,173 +195,6 @@ export default function AboutPage() {
             VSkin Beauty & Slimming uses VJet technology — an officially approved,
             pneumatic serum delivery system that achieves premium aesthetic results
             with absolutely no needles, no surgery, and no downtime.
-          </p>
-        </div>
-
-        <div
-          style={{
-            maxWidth: "800px",
-            margin: "0 auto 3rem",
-            padding: "2rem 1.75rem",
-            borderRadius: "1.25rem",
-            background: "#fff",
-            border: "1px solid rgba(101,45,144,0.12)",
-            boxShadow: "0 12px 40px rgba(15,23,42,0.06)",
-            textAlign: "left",
-          }}
-        >
-          <h2
-            style={{
-              fontSize: "1.35rem",
-              fontWeight: "800",
-              color: "#1a1a1a",
-              marginTop: 0,
-              marginBottom: "0.75rem",
-            }}
-          >
-            Why this clinic exists
-          </h2>
-          <p
-            style={{
-              fontSize: "1rem",
-              lineHeight: "1.8",
-              color: "#444",
-              margin: "0 0 1rem",
-            }}
-          >
-            This business exists because too many beauty journeys start with fear:
-            fear of needles, fear of hard-selling, fear of looking &ldquo;not like
-            yourself.&rdquo; We built around non-invasive, needle-free protocols so
-            you can chase sharper contours and fresher skin without defaulting to
-            surgery—or pressure to buy ten things you never asked for.
-          </p>
-          <p
-            style={{
-              fontSize: "1rem",
-              lineHeight: "1.8",
-              color: "#444",
-              margin: 0,
-            }}
-          >
-            <strong>Replace this block with your real founder story</strong> (name,
-            years in aesthetics, why Jurong, what you refuse to compromise on).
-            Specific beats slick every time—and it is what stops &ldquo;random
-            website&rdquo; skepticism.
-          </p>
-        </div>
-
-        <div
-          style={{
-            maxWidth: "800px",
-            margin: "0 auto 3rem",
-            padding: "2rem 1.75rem",
-            borderRadius: "1.25rem",
-            background: "linear-gradient(135deg, #652D90 0%, #40215C 100%)",
-            color: "#fff",
-            textAlign: "center",
-            boxShadow: "0 16px 40px rgba(101,45,144,0.25)",
-          }}
-        >
-          <h2
-            style={{
-              fontSize: "1.2rem",
-              fontWeight: "800",
-              marginTop: 0,
-              marginBottom: "0.75rem",
-            }}
-          >
-            Mission
-          </h2>
-          <p style={{ fontSize: "1.05rem", lineHeight: "1.75", margin: 0, opacity: 0.95 }}>
-            Deliver honest, needle-free aesthetic outcomes with compliant
-            technology—where clarity comes before commission, and where your face
-            keeps its character.
-          </p>
-        </div>
-
-        <div
-          style={{
-            maxWidth: "800px",
-            margin: "0 auto 3rem",
-            padding: "2rem 1.75rem",
-            borderRadius: "1.25rem",
-            background: "#fff",
-            border: "1px solid rgba(101,45,144,0.12)",
-            textAlign: "left",
-          }}
-        >
-          <h2
-            style={{
-              fontSize: "1.2rem",
-              fontWeight: "800",
-              color: "#1a1a1a",
-              marginTop: 0,
-              marginBottom: "0.75rem",
-            }}
-          >
-            Behind the scenes (add proof as you have it)
-          </h2>
-          <ul
-            style={{
-              margin: 0,
-              paddingLeft: "1.2rem",
-              color: "#444",
-              lineHeight: "1.75",
-              fontSize: "1rem",
-            }}
-          >
-            <li>
-              <strong>Technology sourcing:</strong> VJet / pneumatic delivery vetted
-              for FDA &amp; HSA compliance—document what you display on-site.
-            </li>
-            <li>
-              <strong>Training:</strong> list certificates, brand trainings, and
-              years of hands-on experience per lead therapist (only verifiable
-              facts).
-            </li>
-            <li>
-              <strong>Real media:</strong> clinic interior, treatment room, team
-              headshots—replace template feel with Jurong-specific proof.
-            </li>
-          </ul>
-        </div>
-
-        <div
-          style={{
-            maxWidth: "720px",
-            margin: "0 auto 3.5rem",
-            padding: "2rem 1.75rem",
-            borderRadius: "1.25rem",
-            background: "rgba(255,255,255,0.85)",
-            border: "1px solid rgba(101,45,144,0.12)",
-            boxShadow: "0 12px 40px rgba(15,23,42,0.06)",
-            textAlign: "left",
-          }}
-        >
-          <h2
-            style={{
-              fontSize: "1.25rem",
-              fontWeight: "800",
-              color: "#1a1a1a",
-              marginTop: 0,
-              marginBottom: "0.75rem",
-            }}
-          >
-            Why we focus on these treatments
-          </h2>
-          <p
-            style={{
-              fontSize: "1rem",
-              lineHeight: "1.75",
-              color: "#444",
-              margin: 0,
-            }}
-          >
-            We are not trying to stock every gadget on the market. We built VSkin
-            around needle-free, non-invasive protocols that answer real
-            Singaporean concerns—contour, firmness, reactive skin, and busy
-            schedules—so you get curated expertise instead of a generic menu.
-            When something does not fit your goals or health profile, we say so.
           </p>
         </div>
 
@@ -440,13 +273,10 @@ export default function AboutPage() {
           }}
         >
           <p style={{ fontSize: "1.1rem", color: "#555", marginBottom: "1.5rem" }}>
-            Experience the difference at our Jurong East outlet—or message us first
-            with your questions.
+            Experience the difference at our Jurong East outlet.
           </p>
           <a
-            href="https://wa.me/6598807382?text=Hi%20VSkin%2C%20I%20read%20your%20About%20page%20and%20want%20to%20book%20a%20face%20analysis%20%2F%20consultation."
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/contact"
             style={{
               display: "inline-block",
               background: "linear-gradient(135deg, #652D90 0%, #40215C 100%)",
@@ -461,7 +291,7 @@ export default function AboutPage() {
               transition: "transform 0.3s ease, box-shadow 0.3s ease",
             }}
           >
-            WhatsApp: Book face analysis
+            Book a Free Consultation
           </a>
         </div>
       </main>

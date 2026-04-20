@@ -90,7 +90,7 @@ const Card = ({ title, description }) => {
         className="neumorphic-card"
         style={{
           ...cardStyle,
-          animation: 'none',
+          animation: !isHovered && !isPressed ? 'pulse 4s ease-in-out infinite' : 'none',
         }}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => {
@@ -197,22 +197,23 @@ const AboutSection = () => {
       />
       
       <h1 style={styles.sectionTitle}>
-        Confidence you can feel—in your skin and in our process
+        Let us bring out the best in you, shine with confidence, and embrace
+        your beauty
       </h1>
 
       {/* 3 cards laid out side by side in a responsive grid */}
       <div style={styles.grid}>
         <Card
-          title="Results without the needle anxiety"
-          description="Walk out knowing you chose a needle-free, non-invasive path—designed for comfort and clearer skin over time, not a quick shock to your face."
+          title="Advanced Aesthetic Technology"
+          description="Experience revolutionary procedures that provide lasting results with no needles required. Safe, effective, and comfortable for all skin types."
         />
         <Card
-          title="One team, mapped to your goal"
-          description="Whether you want contour, firmness, or a gentler first experience, we connect you to the right protocol instead of selling everything at once."
+          title="Comprehensive Solutions"
+          description="Achieve fat-melting, skin-tightening, wrinkle reduction, and more with our all-in-one V-Skin technology."
         />
         <Card
-          title="Honest pricing, no surprises"
-          description="Transparent trials and packages so you decide your pace—starting from accessible first visits so you can try before you commit."
+          title="Affordable Pricing"
+          description="Transparent prices with no hidden fees—experience premium services starting at just $158 for first-time trials."
         />
       </div>
     </div>
