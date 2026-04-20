@@ -111,7 +111,7 @@ function Maps() {
         <div ref={containerRef}>
           {/* Enhanced Title Section */}
           <div 
-            className={`${styles["flex-wrapper"]} ${styles.maps}`}
+            className={styles["flex-wrapper"]}
                          style={{
                animation: isVisible ? 'mapZoomIn 1.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)' : 'none',
                position: 'relative',
@@ -134,18 +134,14 @@ function Maps() {
 
           {/* Enhanced Map Section */}
           <div 
-            className={styles.grid1maps}
+            className={styles.mapSection}
                          style={{
                animation: isVisible ? 'mapZoomIn 1.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.6s both' : 'none',
-               display: 'flex',
-               justifyContent: 'center',
-               alignItems: 'center',
-               padding: '2rem',
              }}
           >
             <div
               ref={mapRef}
-              className="neumorphic-map-container"
+              className={`neumorphic-map-container ${styles.mapFrame}`}
               style={{
                 position: 'relative',
                 borderRadius: '16px',
