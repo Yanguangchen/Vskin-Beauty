@@ -6,8 +6,8 @@ const SplineViewer = lazy(() => import("./SplineViewer"));
 
 function SpliceElement() {
   return (
-    <main>
-      <div>
+    <main className={styles.heroSplineSection}>
+      <div className={styles.heroSplineInner}>
         <div className={`${styles["spline-container"]} ${styles.splineContainer}`}>
           <div className={styles.darkmodeContainer}></div>
           <Suspense fallback={<div>Loading...</div>}>
