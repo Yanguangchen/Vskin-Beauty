@@ -13,32 +13,32 @@ const badges = [
 
 const pillars = [
   {
-    title: "No Needles. Ever.",
+    title: "Needle-free depth, less anxiety",
     description:
       "The VJet system is a pneumatic, gas-driven delivery mechanism that injects beauty serums directly into the skin's dermis layer — without a single needle. No punctures, no wounds, no risk of infection from sharp instruments.",
   },
   {
-    title: "Non-Invasive Technology",
+    title: "Walk in, walk out—no surgery",
     description:
       "Unlike surgical facelifts or invasive procedures, VSkin treatments work entirely on the surface and sub-surface of the skin. There is no cutting, no anaesthesia, and no recovery room. You walk in and walk out feeling refreshed.",
   },
   {
-    title: "Zero Surgical Risk",
+    title: "Safety you can feel good about",
     description:
       "Surgical procedures carry inherent risks — complications, scarring, prolonged healing, and anaesthesia reactions. With VJet technology, none of these apply. Our treatments are designed to be as safe as they are effective.",
   },
   {
-    title: "FDA & HSA Approved",
+    title: "Standards you can look up",
     description:
       "VSkin's technology meets the rigorous standards set by both the US Food & Drug Administration (FDA) and Singapore's Health Sciences Authority (HSA). These approvals are not cosmetic — they are official certifications of safety and efficacy.",
   },
   {
-    title: "Scientifically Backed Results",
+    title: "Goals you can see in the mirror",
     description:
       "Our treatments deliver measurable outcomes: fat reduction, skin tightening, wrinkle smoothing, and serum absorption — all without the risks associated with needles or surgery. Results you can see, delivered safely.",
   },
   {
-    title: "Comfortable for All Skin Types",
+    title: "Sensitive skin is not an afterthought",
     description:
       "VJet's gas-driven mechanism is gentle enough for sensitive skin yet powerful enough to deliver serums deep into the dermis. Suitable for all skin tones and types, with no contraindications from needles or surgical materials.",
   },
@@ -180,8 +180,8 @@ export default function AboutPage() {
               marginBottom: "1.5rem",
             }}
           >
-            The Future of Beauty is{" "}
-            <span style={{ color: "#652D90" }}>Safe, Proven & Needle-Free</span>
+            Needle-free beauty that still{" "}
+            <span style={{ color: "#652D90" }}>feels premium</span>
           </h1>
           <p
             style={{
@@ -195,6 +195,21 @@ export default function AboutPage() {
             VSkin Beauty & Slimming uses VJet technology — an officially approved,
             pneumatic serum delivery system that achieves premium aesthetic results
             with absolutely no needles, no surgery, and no downtime.
+          </p>
+          <p
+            style={{
+              fontSize: "1rem",
+              lineHeight: "1.75",
+              color: "#444",
+              maxWidth: "640px",
+              margin: "1.25rem auto 0",
+              textAlign: "left",
+            }}
+          >
+            <strong>Why we exist:</strong> too many beauty journeys start with fear—of
+            needles, of hard-selling, of not looking like yourself. We built VSkin
+            around non-invasive protocols and clear explanations so you can decide
+            with confidence.
           </p>
         </div>
 
@@ -273,10 +288,12 @@ export default function AboutPage() {
           }}
         >
           <p style={{ fontSize: "1.1rem", color: "#555", marginBottom: "1.5rem" }}>
-            Experience the difference at our Jurong East outlet.
+            Experience the difference at our Jurong East outlet—or message us first with your questions.
           </p>
           <a
-            href="/contact"
+            href="https://wa.me/6598807382?text=Hi%20VSkin%2C%20I%20read%20your%20About%20page%20and%20want%20to%20book%20a%20consultation."
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
               display: "inline-block",
               background: "linear-gradient(135deg, #652D90 0%, #40215C 100%)",
@@ -291,7 +308,7 @@ export default function AboutPage() {
               transition: "transform 0.3s ease, box-shadow 0.3s ease",
             }}
           >
-            Book a Free Consultation
+            WhatsApp: Book consultation
           </a>
         </div>
       </main>

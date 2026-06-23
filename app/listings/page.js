@@ -2,7 +2,8 @@ import Listings from "../../components/listings";
 
 export const metadata = {
   title: "Vskin Beauty & Slimming - Services",
-  description: "Explore our wide range of beauty services and offerings.",
+  description:
+    "Needle-free VJet slimming and skin treatments in Jurong. Compare downtime at a glance and WhatsApp 9880 7382 to book.",
 };
 
 export default function ListingsPage() {
