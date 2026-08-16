@@ -1,0 +1,831 @@
+/* Full price list — search, filters and grouped menu.
+   Follows the FeatureCards standard: purple gradient, rounded corners,
+   neumorphic shadows and cubic-bezier(0.25, 0.46, 0.45, 0.94) transitions. */
+
+.page {
+  min-height: 100vh;
+  padding: 3rem 1.5rem 5rem;
+  font-family: "Quicksand", sans-serif;
+  background: linear-gradient(160deg, #f5f0fa 0%, #f0f0f0 50%, #fdf8ff 100%);
+  color: #1a1a1a;
+}
+
+.inner {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+/* ------------------------------------------------------------------ header */
+
+.hero {
+  text-align: center;
+  margin-bottom: 2rem;
+  animation: fadeInUp 0.6s ease both;
+}
+
+.heroKicker {
+  margin: 0 0 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #652d90;
+}
+
+.heroTitle {
+  margin: 0 0 1rem;
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.heroText {
+  max-width: 620px;
+  margin: 0 auto 1.5rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+.heroStats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.heroStat {
+  padding: 0.45rem 1.1rem;
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #40215c;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(101, 45, 144, 0.12);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.05),
+    -4px -4px 10px rgba(255, 255, 255, 0.9);
+}
+
+/* --------------------------------------------------------------- controls */
+
+.controls {
+  position: sticky;
+  top: 80px;
+  z-index: 20;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  /* opaque enough to stay readable where backdrop-filter is unsupported */
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 10px 30px rgba(101, 45, 144, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.searchRow {
+  display: flex;
+  gap: 0.75rem;
+  align-items: stretch;
+}
+
+.searchField {
+  position: relative;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.searchIcon {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  color: #652d90;
+  pointer-events: none;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.9rem 2.75rem 0.9rem 2.9rem;
+  border-radius: 100px;
+  border: 1px solid rgba(101, 45, 144, 0.16);
+  background: #fff;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.05),
+    inset -3px -3px 8px rgba(255, 255, 255, 0.9);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.searchInput::placeholder {
+  color: #9a92a4;
+  font-weight: 500;
+}
+
+/* the field carries its own clear button, so hide the browser's */
+.searchInput::-webkit-search-cancel-button,
+.searchInput::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: rgba(101, 45, 144, 0.5);
+  box-shadow: 0 0 0 4px rgba(101, 45, 144, 0.12);
+}
+
+.clearButton {
+  position: absolute;
+  top: 50%;
+  right: 0.55rem;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0.95rem;
+  line-height: 1;
+  color: #fff;
+  background: linear-gradient(135deg, #652d90 0%, #40215c 100%);
+  transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.clearButton:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+.filterToggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+  padding: 0.9rem 1.35rem;
+  border-radius: 100px;
+  border: 1px solid rgba(101, 45, 144, 0.16);
+  background: #fff;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #40215c;
+  cursor: pointer;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.06),
+    -4px -4px 10px rgba(255, 255, 255, 0.9);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.filterToggle:hover {
+  transform: translateY(-2px);
+}
+
+.filterToggleOpen {
+  color: #fff;
+  background: linear-gradient(135deg, #652d90 0%, #40215c 100%);
+  border-color: transparent;
+}
+
+.filterCount {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  background: #e2b019;
+  color: #40215c;
+}
+
+.chevron {
+  width: 12px;
+  height: 12px;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+/* chips ------------------------------------------------------------------ */
+
+.chipRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.9rem;
+}
+
+.chip {
+  padding: 0.5rem 1rem;
+  border-radius: 100px;
+  border: 1px solid rgba(101, 45, 144, 0.16);
+  background: rgba(255, 255, 255, 0.9);
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #4a4a4a;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.chip:hover {
+  transform: translateY(-2px);
+  border-color: rgba(101, 45, 144, 0.4);
+  color: #40215c;
+}
+
+.chipActive {
+  color: #fff;
+  border-color: transparent;
+  background: linear-gradient(135deg, #652d90 0%, #40215c 100%);
+  box-shadow: 0 6px 14px rgba(101, 45, 144, 0.3);
+}
+
+.chipCount {
+  margin-left: 0.4rem;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+/* collapsible panel ------------------------------------------------------ */
+
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.panelOpen {
+  max-height: 900px;
+}
+
+.panelInner {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(101, 45, 144, 0.12);
+}
+
+.panelGroup + .panelGroup {
+  margin-top: 1.1rem;
+}
+
+.panelLabel {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #8a7f96;
+}
+
+.sortRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.6rem;
+}
+
+.sortSelect {
+  padding: 0.55rem 1rem;
+  border-radius: 100px;
+  border: 1px solid rgba(101, 45, 144, 0.16);
+  background: #fff;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #40215c;
+  cursor: pointer;
+}
+
+.sortSelect:focus {
+  outline: none;
+  border-color: rgba(101, 45, 144, 0.5);
+  box-shadow: 0 0 0 4px rgba(101, 45, 144, 0.12);
+}
+
+/* summary ---------------------------------------------------------------- */
+
+.summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.9rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid rgba(101, 45, 144, 0.12);
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.summaryCount {
+  font-weight: 700;
+  color: #40215c;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.5rem 0.3rem 0.75rem;
+  border: none;
+  border-radius: 100px;
+  background: rgba(101, 45, 144, 0.1);
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #40215c;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.pill:hover {
+  background: rgba(101, 45, 144, 0.2);
+}
+
+.pillX {
+  font-size: 0.9rem;
+  line-height: 1;
+  opacity: 0.65;
+}
+
+.clearAll {
+  margin-left: auto;
+  padding: 0.3rem 0.9rem;
+  border: 1px solid rgba(101, 45, 144, 0.25);
+  border-radius: 100px;
+  background: transparent;
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #652d90;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.clearAll:hover {
+  color: #fff;
+  background: #652d90;
+}
+
+/* ------------------------------------------------------------ consultation */
+
+.consult {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  padding: 1rem 1.5rem;
+  border-radius: 1.25rem;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(135deg, #652d90 0%, #40215c 100%);
+  box-shadow: 10px 10px 24px rgba(0, 0, 0, 0.15),
+    -6px -6px 16px rgba(255, 255, 255, 0.5), 0 0 20px rgba(101, 45, 144, 0.25);
+}
+
+.consultText {
+  margin: 0;
+  font-size: 0.98rem;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.consultLink {
+  padding: 0.55rem 1.4rem;
+  border-radius: 100px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #40215c;
+  background: #fff;
+  transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.consultLink:hover {
+  transform: translateY(-2px);
+}
+
+/* ----------------------------------------------------------------- results */
+
+.results {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.card {
+  border-radius: 1.5rem;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(101, 45, 144, 0.08);
+  box-shadow: 10px 10px 24px rgba(0, 0, 0, 0.08),
+    -8px -8px 20px rgba(255, 255, 255, 0.9);
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    box-shadow 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation: fadeInUp 0.45s ease both;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 14px 14px 30px rgba(0, 0, 0, 0.12),
+    -10px -10px 24px rgba(255, 255, 255, 0.95),
+    0 0 20px rgba(101, 45, 144, 0.15);
+}
+
+.cardHeader {
+  position: relative;
+  padding: 1.5rem 1.75rem;
+  color: #fff;
+  background: linear-gradient(135deg, #652d90 0%, #40215c 100%);
+}
+
+.cardHeader::after {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.cardBlurb {
+  margin: 0.4rem 0 0;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.cardMeta {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.25rem 0.8rem;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.includes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.9rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.includesItem {
+  padding: 0.3rem 0.75rem;
+  border-radius: 100px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.cardNote {
+  margin: 0.9rem 0 0;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.cardBody {
+  padding: 0.5rem 1.75rem 1.5rem;
+}
+
+.group + .group {
+  margin-top: 1.25rem;
+}
+
+.groupTitle {
+  margin: 1.25rem 0 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #652d90;
+}
+
+.rows {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 0.75rem;
+  margin: 0 -0.75rem;
+  border-radius: 0.9rem;
+  border-bottom: 1px solid rgba(101, 45, 144, 0.08);
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.row:hover {
+  background: rgba(101, 45, 144, 0.05);
+  transform: translateX(3px);
+}
+
+.rowMain {
+  min-width: 0;
+}
+
+.rowName {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.rowDetail {
+  margin: 0.2rem 0 0;
+  font-size: 0.87rem;
+  color: #666;
+}
+
+.rowNote {
+  margin: 0.3rem 0 0;
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #7d7387;
+}
+
+.rowIncludes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0.45rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rowIncludesItem {
+  padding: 0.2rem 0.6rem;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #2f7a4f;
+  background: rgba(59, 168, 110, 0.12);
+}
+
+.rowTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.5rem;
+}
+
+.tag {
+  padding: 0.18rem 0.6rem;
+  border-radius: 100px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #652d90;
+  background: rgba(101, 45, 144, 0.1);
+}
+
+.tagTrial {
+  color: #1d6f52;
+  background: rgba(59, 168, 110, 0.14);
+}
+
+.tagPackage {
+  color: #8a6100;
+  background: rgba(226, 176, 25, 0.18);
+}
+
+.tagPromo {
+  color: #a02553;
+  background: rgba(214, 51, 108, 0.12);
+}
+
+.tagCategory {
+  color: #40215c;
+  background: rgba(101, 45, 144, 0.08);
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.price {
+  flex-shrink: 0;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #40215c;
+  white-space: nowrap;
+}
+
+.mark {
+  padding: 0 2px;
+  border-radius: 4px;
+  background: rgba(226, 176, 25, 0.35);
+  color: inherit;
+}
+
+/* flat (sorted) list ----------------------------------------------------- */
+
+.flatCard {
+  padding: 0.5rem 1.75rem;
+}
+
+/* ------------------------------------------------------------ empty & CTA */
+
+.empty {
+  padding: 3rem 1.5rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  background: #fff;
+  border: 1px solid rgba(101, 45, 144, 0.08);
+  box-shadow: 10px 10px 24px rgba(0, 0, 0, 0.06),
+    -8px -8px 20px rgba(255, 255, 255, 0.9);
+}
+
+.emptyTitle {
+  margin: 0 0 0.6rem;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.emptyText {
+  margin: 0 0 1.5rem;
+  color: #666;
+  line-height: 1.7;
+}
+
+.cta {
+  margin-top: 3.5rem;
+  text-align: center;
+}
+
+.ctaText {
+  margin: 0 0 1.25rem;
+  color: #666;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 100px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(135deg, #652d90 0%, #40215c 100%);
+  box-shadow: 8px 8px 20px rgba(101, 45, 144, 0.35),
+    -4px -4px 10px rgba(255, 255, 255, 0.6);
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.ctaButton:hover {
+  transform: translateY(-3px);
+}
+
+.footnote {
+  max-width: 620px;
+  margin: 2.5rem auto 0;
+  font-size: 0.82rem;
+  line-height: 1.7;
+  text-align: center;
+  color: #857b8f;
+}
+
+/* ---------------------------------------------------------------- helpers */
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.chip:focus-visible,
+.filterToggle:focus-visible,
+.clearButton:focus-visible,
+.clearAll:focus-visible,
+.pill:focus-visible,
+.ctaButton:focus-visible,
+.consultLink:focus-visible {
+  outline: 3px solid rgba(101, 45, 144, 0.45);
+  outline-offset: 2px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 720px) {
+  .page {
+    padding: 2rem 1rem 4rem;
+  }
+
+  .controls {
+    top: 76px;
+    padding: 0.85rem;
+    border-radius: 1.25rem;
+    /* with the filter panel open the bar can outgrow a phone screen */
+    max-height: calc(100vh - 96px);
+    overflow-y: auto;
+  }
+
+  .searchRow {
+    flex-wrap: wrap;
+  }
+
+  .filterToggle {
+    flex: 1 1 100%;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+  }
+
+  .chipRow {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 0.35rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+
+  .panelInner .chipRow {
+    flex-wrap: wrap;
+    overflow-x: visible;
+  }
+
+  .cardHeader {
+    padding: 1.25rem;
+  }
+
+  .cardBody,
+  .flatCard {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .row {
+    margin: 0 -0.5rem;
+    padding: 0.85rem 0.5rem;
+  }
+
+  .price {
+    font-size: 1rem;
+  }
+
+  .clearAll {
+    margin-left: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page *,
+  .card,
+  .row,
+  .chip {
+    animation: none !important;
+    transition: none !important;
+  }
+}
