@@ -1,0 +1,11 @@
+.chartGrid {
+  display: grid;
+  grid-template-columns: minmax(7rem, 0.9fr) 1.2fr 1.2fr;
+  gap: 0;
+}
+
+@media (max-width: 640px) {
+  .chartGrid {
+    grid-template-columns: 1fr;
+  }
+}
