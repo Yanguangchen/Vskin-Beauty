@@ -11,24 +11,27 @@
   width: 100%;
 }
 
-/* Contain neumorphic shadows (~24px) so they do not widen the page on mobile */
+/* Mobile-only: inset the card slightly so neumorphic shadows do not extend past the viewport */
 .heroSplineSection {
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
-  overflow-x: clip;
 }
 
 .heroSplineInner {
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
-  padding: 24px 20px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+  .heroSplineSection {
+    overflow-x: clip;
+  }
+
   .heroSplineInner {
-    padding: 20px 12px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 
@@ -49,19 +52,14 @@
     inset -1px -1px 2px rgba(0, 0, 0, 0.05),
     inset 1px 1px 2px rgba(255, 255, 255, 0.4);
   overflow: hidden;
-  /* Clip shadow paint outside the rounded rect (overflow does not clip box-shadow) */
-  clip-path: inset(0 round 20px);
 }
 
 .spline-container spline-viewer {
   display: block;
-  flex: 1 1 auto;
-  align-self: stretch;
   width: 100%;
   max-width: 100%;
   min-width: 0;
   height: 100%;
-  min-height: 0;
 }
 .video-container {
   display: none;
