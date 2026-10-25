@@ -1,3 +1,4 @@
+import Link from "next/link";
 import TodaysArticle from "../todays-article/page";
 
 export const metadata = {
@@ -104,6 +105,20 @@ export default function BlogsPage() {
         }
       `}</style>
 
+      <article style={{ maxWidth: 760, margin: "1.5rem auto", padding: "0 1.25rem", lineHeight: 1.6 }}>
+        <p style={{ fontSize: "0.8rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "#652D90" }}>
+          Treatment guide
+        </p>
+        <h2 style={{ margin: "0.25rem 0" }}>
+          <Link href="/Blogs/v-jet-cell-renewal-first-visit">
+            V Jet Cell Renewal: a first visit in Jurong East
+          </Link>
+        </h2>
+        <p>
+          First-trial prices for 0.5ml and 1ml, and how those lines differ
+          from later ala carte and package prices.
+        </p>
+      </article>
       <TodaysArticle />
 
       <main style={{
