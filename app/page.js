@@ -2,14 +2,25 @@ import MainPage from "../components/homepage"; // Import the HomePage component
 
 export const metadata = {
   title: " VSkin Beauty & Slimming",
-  description: "Discover your inner beauty and confidence.",
+  description:
+    "Needle-free sculpting and slimming in Jurong East. VJet pneumatic serum delivery—no needles, no surgery. WhatsApp 9880 7382; first-time trials from $158.",
 };
 
 export default function HomePage() {
   return (
     <main>
-      <div className="title1">
-        <h1>Welcome to the world of VSkin Beauty & Slimming</h1>
+      <div className="title1 hero-lead-block">
+        <h1 className="hero-lead-title">
+          Needle-free sculpting & slimming you can trust—Jurong East
+        </h1>
+        <p className="hero-lead-sub">
+          VJet technology: pneumatic serum delivery—no needles, no surgery.
+          WhatsApp{" "}
+          <a href="https://wa.me/6598807382" className="hero-lead-link">
+            9880 7382
+          </a>{" "}
+          to book or ask about first-time trials from $158.
+        </p>
       </div>
       <script
         async

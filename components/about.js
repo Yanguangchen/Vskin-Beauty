@@ -197,23 +197,22 @@ const AboutSection = () => {
       />
       
       <h1 style={styles.sectionTitle}>
-        Let us bring out the best in you, shine with confidence, and embrace
-        your beauty
+        Look fresher on camera—without the needle trade-off
       </h1>
 
       {/* 3 cards laid out side by side in a responsive grid */}
       <div style={styles.grid}>
         <Card
-          title="Advanced Aesthetic Technology"
-          description="Experience revolutionary procedures that provide lasting results with no needles required. Safe, effective, and comfortable for all skin types."
+          title="Results without needle anxiety"
+          description="VJet uses controlled pressure to help serums reach where they matter—so you can target contour, firmness, and texture with a gentler experience than syringe-first clinics."
         />
         <Card
-          title="Comprehensive Solutions"
-          description="Achieve fat-melting, skin-tightening, wrinkle reduction, and more with our all-in-one V-Skin technology."
+          title="One plan that matches your goal"
+          description="Whether you start with slimming, tightening, or sensitive-skin pacing, we explain what each session is for—so you are not sold ten random add-ons."
         />
         <Card
-          title="Affordable Pricing"
-          description="Transparent prices with no hidden fees—experience premium services starting at just $158 for first-time trials."
+          title="Honest entry pricing"
+          description="First-time trials from $158 where applicable, with clear next-step options before you commit to a course. Ask anything twice—we encourage it."
         />
       </div>
     </div>

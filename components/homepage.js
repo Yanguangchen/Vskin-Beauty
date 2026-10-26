@@ -11,6 +11,7 @@ const AboutSection = lazy(() => import("./about"));
 const Horizontalbanner = lazy(() => import("./horizontalbanner"));
 const ReviewCarousell = lazy(() => import("./reviewCarousell"));
 const MediaShowcase = lazy(() => import("./mediaShowcase"));
+const VskinVsClinicChart = lazy(() => import("./vskinVsClinicChart"));
 
 // const Announcement = lazy(() => import("./announcement"));
 
@@ -64,6 +65,10 @@ function Homepage() {
 
       <Suspense fallback={<Loading />}>
         <MediaShowcase />
+      </Suspense>
+
+      <Suspense fallback={<Loading />}>
+        <VskinVsClinicChart />
       </Suspense>
 
       <Suspense fallback={<Loading />}>
