@@ -105,6 +105,20 @@ export default function BlogsPage() {
         }
       `}</style>
 
+      <article style={{ maxWidth: 760, margin: "1.5rem auto 0", padding: "0 1.25rem", lineHeight: 1.6 }}>
+        <p style={{ fontSize: "0.8rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "#652D90" }}>
+          Treatment guide
+        </p>
+        <h2 style={{ margin: "0.25rem 0" }}>
+          <Link href="/Blogs/face-lifting-first-trial">
+            Face lifting: the published first trial
+          </Link>
+        </h2>
+        <p>
+          Face lifting first trial is $88. Bust and butt lifting first trial
+          is $388. Cell renewal is a different menu.
+        </p>
+      </article>
       <article style={{ maxWidth: 760, margin: "1.5rem auto", padding: "0 1.25rem", lineHeight: 1.6 }}>
         <p style={{ fontSize: "0.8rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "#652D90" }}>
           Treatment guide
